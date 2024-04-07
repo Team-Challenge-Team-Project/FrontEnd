@@ -107,7 +107,6 @@ This projectis distributed under the terms of the [Mozilla Public License (MPL) 
 Authors and history
 ---------------------------
 
-RS Clone is an alternate final stage#2 project in RS.SCHOOL. This is a team mission in the course of which you need to develop a clone of a game or application. The team itself chooses the topic of the project. It can be either an exact or a simplified copy of an existing project, or your own application.
 
 Authors 
 * [gomunkool  [Frontend developer (React, TS, JS, HTML, CSS)]](https://github.com/gomunkool)
