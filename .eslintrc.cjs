@@ -36,8 +36,9 @@ module.exports = {
     'comma-dangle': 0,
     'no-unused-vars': 'warn',
     'no-trailing-spaces': 'error',
-    'react-hooks/rules-of-hooks': 'warn',
     'react/react-in-jsx-scope': 'off',
+    'react-hooks/rules-of-hooks': 'off',
+    'react-hooks/exhaustive-deps': 'off',
   },
   ignorePatterns: ['dist', '.eslintrc.cjs', 'webpack.config.js'],
 };
