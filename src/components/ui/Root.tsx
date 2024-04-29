@@ -6,9 +6,7 @@ export const Root = () => {
   return (
     <div className='app'>
       <Header />
-      <div className='main'>
         <Outlet />
-      </div>
       <Footer />
     </div>
   )

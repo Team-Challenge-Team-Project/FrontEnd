@@ -61,6 +61,7 @@ input,
 button,
 textarea {
     font-family: Roboto;
+    font-size: 18px;
 }
 
 input::-ms-clear {
