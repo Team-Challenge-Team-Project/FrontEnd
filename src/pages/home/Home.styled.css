@@ -1,0 +1,237 @@
+.main {
+    flex: 1 1 auto;
+}
+
+.main-board {
+    position: relative;
+    width: 1440px;
+    height: 872px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 0 0 90px 0;
+    margin: 40px 0 100px 0;
+}
+
+.main-board::before, .new-in::before, .our-looks__count::before, .journal::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #565656;
+    bottom: -50px;
+    left: 0;
+}
+
+.main-board__count {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../../assets/img/famaly.png') 0 0/100% auto no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.main-board__button-count {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-board__button {
+    width: 200px;
+    height: 60px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    z-index: 2;
+    display: inline-block;
+    box-shadow: inset 0 0 0 0 #565656;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: ease-out 0.5s;
+}
+
+.main-board__button:hover {
+    box-shadow: inset 400px 0 0 0 #565656;
+    color: #FFFFFF;
+}
+
+.new-in {
+    text-align: center;
+    position: relative;
+    padding: 0 0 40px 0;
+    margin: 40px 0 100px 0;
+}
+
+
+.section__title {
+    font-family: "PlayFair Display";
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.filter__buttons_count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.standard__button {
+    background-color: #FFFCF4;
+    height: 60px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: #565656 1px solid;
+    margin: 0 15px 0 0;
+    box-shadow: inset 0 0 0 0 #565656;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: ease-out 0.5s;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.filter__button_filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter__button_filters p {
+    margin: 0 10px 0 0;
+}
+
+.standard__button svg path {
+    transition: ease-out 0.5s;
+}
+
+
+.standard__button:hover {
+    box-shadow: inset 400px 0 0 0 #565656;
+    color: #FFFFFF;
+}
+
+.standard__button:hover svg path {
+    fill: #ffffff;
+}
+
+.filter__sort {
+    flex: 1 1 auto;
+    background-color: #FFFCF4;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 5px;
+}
+
+.filter__sort p {
+    margin: 0 10px 0 0;
+    position: relative;
+    padding: 8px;
+}
+
+.filter__sort p::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.filter__sort p:hover::before {
+    width: 140%;
+}
+
+.products__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 70px 0;
+    flex-wrap: wrap;
+}
+
+.new-products__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.our-looks__count {
+    text-align: center;
+    position: relative;
+    padding: 0 0 40px 0;
+    margin: 40px 0 100px 0;
+}
+
+.carousel__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0 0 0;
+    max-height: 700px;
+}
+
+.carousel__more-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 700px;
+}
+
+.carousel__arrow {
+    cursor: pointer;
+    transition: 0.3s all;
+
+}
+
+.carousel__arrow:hover {
+    opacity: 0.4;
+}
+
+.carousel__button {
+    margin: 50px 0 0 0;
+}
+
+.carousel__pagination_count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.carousel__pagination {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: #000000 1px solid;
+    cursor: pointer;
+}
+
+.carousel__pagination_active {
+    background-color: #000000;
+}
+
+.journal {
+    text-align: center;
+    position: relative;
+    padding: 0 0 40px 0;
+    margin: 40px 0 100px 0;
+}
+
+.journal__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 70px 0;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,84 @@
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-bar__count {
+    width: 33%;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav__list_item {
+    font-size: 21px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.nav__list_item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.nav__list_item:hover::before {
+    width: 100%;
+}
+
+.title {
+    font-family: "PlayFair Display";
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 226%;
+    width: 33%;
+    text-align: center;
+}
+
+.links__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 33%;
+}
+
+.links__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.links__bottom::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.links__bottom:hover::before {
+    width: 100%;
+}

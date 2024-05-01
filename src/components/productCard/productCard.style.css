@@ -1,0 +1,23 @@
+.product__count {
+    position: relative;
+}
+
+.product__like {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+}
+
+.product__img {
+    margin: 0 0 20px 0;
+}
+.product__brand{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0 0 8px 0;
+}
+
+.product__info{
+    margin: 0 0 20px 0;
+}
