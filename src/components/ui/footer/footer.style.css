@@ -1,3 +1,50 @@
-.footer{
-    color: red;
+.footer {
+  padding: 64px 0 113px;
+}
+
+.footer__row {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__about {
+  flex-basis: 591px;
+}
+
+.footer__about span {
+  font-weight: 400;
+  line-height: 23.52px;
+  letter-spacing: 0.11em;
+  text-align: center;
+}
+
+.footer__about p {
+  font-weight: 400;
+  line-height: 23.52px;
+  letter-spacing: 0.11em;
+  margin: 8px 0 16px;
+}
+
+.footer__social-img {
+  margin-right: 24px;
+  width: 40px;
+  height: 40px;
+}
+
+.footer__links {
+  margin-right: 198px;
+}
+
+.footer__links ul > li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36.16px;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+}
+
+.container {
+  padding: 0 var(--padding-var);
 }
