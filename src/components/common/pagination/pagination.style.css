@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.pagination ul {
+  display: flex;
+  column-gap: 16px;
+}
+
+.pagination-link {
+  background: none;
+  font-size: var(--h3-size);
+}
+
+.pagination__btn {
+  background: none;
+}
