@@ -20,7 +20,7 @@ export const Home = () => {
     <section className='new-in'>
       <h3 className='section__title new-in__title'>New In</h3>
       <div className='filter__buttons_count'>
-        <button className='filter__button filter__button_filters standard__button'>
+        <button className='filter__button filter__button_filters'>
           <p>Filters</p>
           <svg className='arrow-svg' width='20' height='13' viewBox='0 0 20 13' fill='none'
                xmlns='http://www.w3.org/2000/svg'>
@@ -40,12 +40,12 @@ export const Home = () => {
               fill='black' />
           </svg>
         </button>
-        <button className='standard__button filter__button'>Women</button>
-        <button className='standard__button filter__button'>Men</button>
-        <button className='filter__sort'>
+        <button className='filter__button'>Women</button>
+        <button className='filter__button'>Men</button>
+        <div className='filter__sort'>
           <p> Sort by</p>
           <img src={arrowBottom} alt='arrow' />
-        </button>
+        </div>
       </div>
       <div className='products__count'>
         <ProductCard />
@@ -53,10 +53,10 @@ export const Home = () => {
         <ProductCard />
         <ProductCard />
       </div>
-      <div className='standard__button new-products__button'>Shop New Arrivals</div>
+      <button className='new-products__button'>Shop New Arrivals</button>
     </section>
     <section className='our-looks__count'>
-      <h3 className='section__title our-looks__title'>Our Looks</h3>
+      <h3 className='our-looks__title'>Our Looks</h3>
       <div className='carousel__count'>
         <div className='carousel__arrow carousel__left-arrow'>
           <img src={arrowLeft} alt='arrow' />

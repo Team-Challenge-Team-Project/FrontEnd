@@ -1,10 +1,12 @@
 .main {
     flex: 1 1 auto;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 .main-board {
     position: relative;
-    width: 1440px;
+    max-width: 1320px;
     height: 872px;
     display: flex;
     align-items: end;
@@ -25,10 +27,10 @@
 
 .main-board__count {
     position: absolute;
-    left: 0;
+    left: -160px;
     top: 0;
     background: url('../../assets/img/famaly.png') 0 0/100% auto no-repeat;
-    width: 100%;
+    width: 120%;
     height: 100%;
     z-index: 1;
 }
@@ -51,6 +53,7 @@
     -webkit-transition: ease-out 0.5s;
     -moz-transition: ease-out 0.5s;
     transition: ease-out 0.5s;
+    border: none;
 }
 
 .main-board__button:hover {
@@ -66,33 +69,13 @@
 }
 
 
-.section__title {
-    font-family: "PlayFair Display";
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
 .filter__buttons_count {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 24px 0 0 0;
 }
 
-.standard__button {
-    background-color: #FFFCF4;
-    height: 60px;
-    padding: 8px 16px;
-    border-radius: 5px;
-    border: #565656 1px solid;
-    margin: 0 15px 0 0;
-    box-shadow: inset 0 0 0 0 #565656;
-    -webkit-transition: ease-out 0.5s;
-    -moz-transition: ease-out 0.5s;
-    transition: ease-out 0.5s;
-    cursor: pointer;
-    letter-spacing: 1px;
-}
 
 .filter__button_filters {
     display: flex;
@@ -104,17 +87,12 @@
     margin: 0 10px 0 0;
 }
 
-.standard__button svg path {
+.filter__button svg path {
     transition: ease-out 0.5s;
 }
 
 
-.standard__button:hover {
-    box-shadow: inset 400px 0 0 0 #565656;
-    color: #FFFFFF;
-}
-
-.standard__button:hover svg path {
+.filter__button:hover svg path {
     fill: #ffffff;
 }
 
@@ -125,6 +103,7 @@
     align-items: center;
     justify-content: end;
     padding: 5px;
+    cursor: pointer;
 }
 
 .filter__sort p {
@@ -149,11 +128,13 @@
 }
 
 .products__count {
+    width: 1320px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 50px 0 70px 0;
     flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 50px;
 }
 
 .new-products__button {

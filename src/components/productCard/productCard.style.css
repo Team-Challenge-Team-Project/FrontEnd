@@ -1,5 +1,6 @@
 .product__count {
     position: relative;
+    width: 315px;
 }
 
 .product__like {
