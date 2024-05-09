@@ -2,6 +2,7 @@
     flex: 1 1 auto;
     max-width: 1320px;
     margin: 0 auto;
+
 }
 
 .main-board {
@@ -12,7 +13,7 @@
     align-items: end;
     justify-content: center;
     padding: 0 0 90px 0;
-    margin: 40px 0 100px 0;
+    margin: 0 0 100px 0;
 }
 
 .main-board::before, .new-in::before, .our-looks__count::before, .journal::before {

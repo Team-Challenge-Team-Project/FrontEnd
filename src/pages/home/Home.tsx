@@ -1,11 +1,8 @@
 import './Home.styled.css'
-import arrowBottom from '../../assets/svg/arrow-bottom.svg'
-import arrowLeft from '../../assets/svg/arrow-left.svg'
-import arrowRight from '../../assets/svg/arrow-right.svg'
-import bigImg from '../../assets/img/Rectangle 636.png'
 
 import ProductCard from '../../components/productCard/productCard'
 import JournalCard from '../../components/jornalCard/journalCard'
+import { ImageFinder, SvgFinder } from '../../Helper'
 
 
 export const Home = () => {
@@ -18,7 +15,7 @@ export const Home = () => {
       </div>
     </section>
     <section className='new-in'>
-      <h3 className='section__title new-in__title'>New In</h3>
+      <h3 className='new-in__title'>New In</h3>
       <div className='filter__buttons_count'>
         <button className='filter__button filter__button_filters'>
           <p>Filters</p>
@@ -44,7 +41,11 @@ export const Home = () => {
         <button className='filter__button'>Men</button>
         <div className='filter__sort'>
           <p> Sort by</p>
-          <img src={arrowBottom} alt='arrow' />
+          <SvgFinder
+            src='arrow-bottom.svg'
+            className='arrow__bottom'
+            alt='arrow'
+          />
         </div>
       </div>
       <div className='products__count'>
@@ -59,14 +60,22 @@ export const Home = () => {
       <h3 className='our-looks__title'>Our Looks</h3>
       <div className='carousel__count'>
         <div className='carousel__arrow carousel__left-arrow'>
-          <img src={arrowLeft} alt='arrow' />
+          <SvgFinder
+            src='arrow-left.svg'
+            className='arrow__left'
+            alt='arrow'
+          />
         </div>
         <div className='carousel__main-photo'>
-          <img src={bigImg} alt='IMG' />
+          <ImageFinder
+            src='Rectangle 636.png'
+            className='big__img'
+            alt='IMG'
+          />
         </div>
         <div className='carousel__more-info'>
           <ProductCard />
-          <button className='standard__button carousel__button'>View This Product</button>
+          <button className='carousel__button'>View This Product</button>
           <div className='carousel__pagination_count'>
             <div className='carousel__pagination carousel__pagination_active'></div>
             <div className='carousel__pagination'></div>
@@ -74,21 +83,23 @@ export const Home = () => {
           </div>
         </div>
         <div className='carousel__arrow carousel__right-arrow'>
-          <img src={arrowRight} alt='arrow' />
+          <SvgFinder
+            src='arrow-right.svg'
+            className='arrow__right'
+            alt='arrow'
+          />
         </div>
       </div>
     </section>
     <section className='journal'>
-      <h3 className='section__title journal__title'>The Journal</h3>
+      <h3 className='journal__title'>The Journal</h3>
       <div className='journal__count'>
         <JournalCard />
         <JournalCard />
         <JournalCard />
         <JournalCard />
       </div>
-      <button className='standard__button journal__button'>View More Stories</button>
+      <button className='journal__button'>View More Stories</button>
     </section>
   </div>
-
-
 }
