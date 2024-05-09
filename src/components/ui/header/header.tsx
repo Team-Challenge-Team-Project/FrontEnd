@@ -1,9 +1,6 @@
 import './header.style.css'
-import loupe from '../../../assets/svg/loupe.svg'
-import like from '../../../assets/svg/like.svg'
-import earth from '../../../assets/svg/earth.svg'
-import login from '../../../assets/svg/login.svg'
-import bag from '../../../assets/svg/bag.svg'
+import { SvgFinder } from '../../../Helper'
+
 
 export const Header = () => {
   return <div className='header'>
@@ -16,20 +13,40 @@ export const Header = () => {
     </nav>
     <h1 className='title'>WEARHOUSE</h1>
     <div className='links__count'>
-      <div className='links__bottom'>
-        <img className='links__bottom_img' src={loupe} alt='loupe' />
+      <div className='links__button'>
+        <SvgFinder
+          src='search.svg'
+          className='links__button_img'
+          alt='search'
+        />
       </div>
-      <div className='links__bottom'>
-        <img className='links__bottom_img' src={like} alt='like' />
+      <div className='links__button'>
+        <SvgFinder
+          src='heart.svg'
+          className='links__button_img'
+          alt='heart'
+        />
       </div>
-      <div className='links__bottom'>
-        <img className='links__bottom_img' src={earth} alt='earth' />
+      <div className='links__button'>
+        <SvgFinder
+          src='earth.svg'
+          className='links__button_img'
+          alt='earth'
+        />
       </div>
-      <div className='links__bottom'>
-        <img className='links__bottom_img' src={login} alt='login' />
+      <div className='links__button'>
+        <SvgFinder
+          src='login.svg'
+          className='links__button_img'
+          alt='login'
+        />
       </div>
-      <div className='links__bottom'>
-        <img className='links__bottom_img' src={bag} alt='bag' />
+      <div className='links__button'>
+        <SvgFinder
+          src='bag.svg'
+          className='links__button_img'
+          alt='bag'
+        />
       </div>
     </div>
   </div>
