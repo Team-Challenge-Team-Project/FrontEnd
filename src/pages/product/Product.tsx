@@ -28,9 +28,61 @@ export const Product = () => {
           <button className='product__size_button'>XL</button>
           <button className='product__size_button'>XLL</button>
         </div>
-        <button>Only one left</button>
-        <button>Add to Cart</button>
-        <button>Buy Now</button>
+        <button className='product__only-one'>Only one left</button>
+        <button className='product__add'>Add to Cart</button>
+        <button className='product__buy'>Buy Now</button>
+      </div>
+    </section>
+    <section className='section__details'>
+      <div className='details__first-img'>
+        <ImageFinder src='shirt1.png' alt='img' className='details__img' />
+      </div>
+      <div className='details__second-img'>
+        <ImageFinder src='shirt2.png' alt='img' className='details__img' />
+      </div>
+      <div className='product__description'>
+        <div className='product__details'>
+          <div className='product__details_title'>
+            <h3>Details</h3>
+            <SvgFinder src='arrow-bottom.svg' className='product__details_arrow' alt='svg' />
+          </div>
+          <p>Creamy beige, classic collar design, long sleeves,
+            shimmering silver-tone buttons, chest flap pockets, side slit pockets, neat hemline, buttoned cuffs</p>
+        </div>
+        <div className='product__details'>
+          <div className='product__details_title'>
+            <h3>Materials and Fit</h3>
+            <SvgFinder src='arrow-bottom.svg' className='product__details_arrow' alt='svg' />
+          </div>
+          <div className='product__material_count'>
+            <div className='product__material_point'></div>
+            <p className='product__material'>Cotton 100%</p>
+          </div>
+          <div className='product__material_count'>
+            <div className='product__material_point'></div>
+            <p className='product__material'>Durable denim</p>
+          </div>
+          <div className='product__material_count'>
+            <div className='product__material_point'></div>
+            <p className='product__material'>Boxy silhouette</p>
+          </div>
+          <div className='product__material_count'>
+            <div className='product__material_point'></div>
+            <p className='product__material'>True to size</p>
+          </div>
+          <div className='product__material_count'>
+            <div className='product__material_point'></div>
+            <p className='product__material'>This garment prioritizes resilience over stretching</p>
+          </div>
+        </div>
+        <div className='product__details'>
+          <div className='product__details_title'>
+            <h3>Lorem Ipsum</h3>
+            <SvgFinder src='arrow-bottom.svg' className='product__details_arrow' alt='svg' />
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis sit amet ipsum ac tincidunt.
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+        </div>
       </div>
     </section>
   </div>)
