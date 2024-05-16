@@ -13,7 +13,7 @@ const ProductCard = () => {
     </div>
     <div className='product__img'>
       <ImageFinder
-        src='Frame 525.png'
+        src='girl.jpg'
         className='product__img_com'
         alt='product'
       />

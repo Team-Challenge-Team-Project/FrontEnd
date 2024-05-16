@@ -15,7 +15,12 @@
 }
 
 .product__img {
-    margin: 0 0 20px 0;
+    width: 315px;
+    height: 497px;
+}
+
+.product__img_com {
+    width: 100%;
 }
 
 .product__brand {

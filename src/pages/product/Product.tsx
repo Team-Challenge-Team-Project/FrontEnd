@@ -1,5 +1,6 @@
 import './Product.style.css'
 import { ImageFinder, SvgFinder } from '../../Helper'
+import ProductCard from '../../components/productCard/productCard'
 
 export const Product = () => {
   return (<div className='product'>
@@ -83,6 +84,23 @@ export const Product = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis sit amet ipsum ac tincidunt.
             Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
         </div>
+      </div>
+    </section>
+    <section className='product__complete'>
+      <h2>Complete the Look</h2>
+      <div className='complete__count'>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
+    </section>
+    <section className='product__recently'>
+      <h2>Recently Viewed</h2>
+      <div className='recently__count'>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </section>
   </div>)
