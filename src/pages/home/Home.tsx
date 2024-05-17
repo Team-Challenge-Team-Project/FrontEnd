@@ -1,5 +1,4 @@
 import './Home.styled.css'
-
 import ProductCard from '../../components/productCard/productCard'
 import JournalCard from '../../components/jornalCard/journalCard'
 import { ImageFinder, SvgFinder } from '../../Helper'
@@ -8,10 +7,11 @@ import { ImageFinder, SvgFinder } from '../../Helper'
 export const Home = () => {
   return <div className='main'>
     <section className='main-board'>
-      <div className='main-board__count'></div>
-      <div className='main-board__button-count'>
-        <button className='main-board__button'>Shop for Her</button>
-        <button className='main-board__button'>Shop for Him</button>
+      <div className='main-board__count'>
+        <div className='main-board__button-count'>
+          <button className='main-board__button'>Shop for Her</button>
+          <button className='main-board__button'>Shop for Him</button>
+        </div>
       </div>
     </section>
     <section className='new-in'>
