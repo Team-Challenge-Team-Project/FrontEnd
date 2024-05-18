@@ -1,22 +1,60 @@
 :root {
+  --text-font-style: normal;
+  --text-font-weight: 400;
+  --heading-font-weight: 600;
+  --heading-card-font-style: 500;
+  --text-letter-spacing: 0.14em;
+  --text-font-family: 'Roboto', sans-serif;
+  --default-icon-size: 25px;
+  --icon-size: 24px;
+  --icon-size-big: 27px;
+  --border-radius: 5px;
+  --padding-var: 60px;
+  --base-text-font-size: 16px;
+
   /* colors */
   --background-color: #fffcf4;
   --text-color: #000000;
   --stroke-color: #565656;
   --attention-message-color: #e24545;
   --hover-button-color: #000000;
+  --button-color-white: #ffffff;
+  --button-color-dark: #212121;
   --disable-button-color: #e0e0e0;
 
   /* size headline */
-  --h1-size: 2.188em;
-  --h2-size: 1.313em;
-  --h3-size: 1.125em;
+  --h1-size: 2.188em; /* logo */
+  --h2-size: 1.313em; /* header-links, "New In", "Our looks" */
+  --h3-size: 1.125em; /* button, "brand name" 18px*/
+  --h4-size: 1.125em;
   --h5-size: 1em;
-  --h6-size: 1em;
-  --p-size: 1em;
-  --h4-button-size: 1.125em;
 
-  --border-radius: 5px;
+  /* button */
+  --height-default-button: 57px;
+  --height-button: 73px;
+  --padding-default-button: 8px 16px;
+  --padding-button: 8px 32px;
+  --padding-product-button: 8;
+  --padding-filter-button: 16px;
 
-  --padding-var: 60px;
+  /* product card */
+  --width-default-product-card: 315px;
+  --height-default-product-card: 503px;
+  --height-middle-product-card: 564px;
+  --height-product-card: 694px; /* product page */
+  --height-product-card-img: 366px; /* home page */
+  --height-product-card-middle-img: 431px; /* home page */
+  --height-product-card-category-img: 440px; /* category page */
+  --height-product-card-product-img: 557px; /* product page */
+  --padding-heart: 24px;
+  --padding-heart-product: 48px;
+
+  /* header */
+  --header-padding: 28px 0 45px;
+  --header-height: 152px;
+
+  /* footer */
+  --footer-padding: 64px 0;
+  --footer-icon-size: 40px;
+  --width-footer-icon: 40px;
 }
