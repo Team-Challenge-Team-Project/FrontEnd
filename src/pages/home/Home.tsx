@@ -1,34 +1,29 @@
-import './Home.styled.css';
 
-import ProductCard from '../../components/productCard/productCard';
-import JournalCard from '../../components/jornalCard/journalCard';
-import { ImageFinder, SvgFinder } from '../../Helper';
+import './Home.styled.css'
+import ProductCard from '../../components/productCard/productCard'
+import JournalCard from '../../components/jornalCard/journalCard'
+import { ImageFinder, SvgFinder } from '../../Helper'
+
 
 export const Home = () => {
-  return (
-    <div className="main">
-      <section className="main-board">
-        <div className="main-board__count"></div>
-        <div className="main-board__button-count">
-          <button className="main-board__button">Shop for Her</button>
-          <button className="main-board__button">Shop for Him</button>
+  return <div className='main'>
+    <section className='main-board'>
+      <div className='main-board__count'>
+        <div className='main-board__button-count'>
+          <button className='main-board__button'>Shop for Her</button>
+          <button className='main-board__button'>Shop for Him</button>
         </div>
-      </section>
-      <section className="new-in">
-        <h3 className="new-in__title">New In</h3>
-        <div className="filter__buttons_count">
-          <button className="filter__button filter__button_filters">
-            <p>Filters</p>
-            <svg
-              className="arrow-svg"
-              width="20"
-              height="13"
-              viewBox="0 0 20 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.75 0.780762C0.551088 0.780762 0.360322 0.859779 0.21967 1.00043C0.0790175 1.14108 0 1.33185
+      </div>
+    </section>
+    <section className='new-in'>
+      <h3 className='new-in__title'>New In</h3>
+      <div className='filter__buttons_count'>
+        <button className='filter__button filter__button_filters'>
+          <p>Filters</p>
+          <svg className='arrow-svg' width='20' height='13' viewBox='0 0 20 13' fill='none'
+               xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M0.75 0.780762C0.551088 0.780762 0.360322 0.859779 0.21967 1.00043C0.0790175 1.14108 0 1.33185
               0 1.53076C0 1.72967 0.0790175 1.92044 0.21967 2.06109C0.360322 2.20174 0.551088 2.28076
               0.75 2.28076H19.25C19.4489 2.28076 19.6397 2.20174 19.7803 2.06109C19.921 1.92044 20 1.72967
               20 1.53076C20 1.33185 19.921 1.14108 19.7803 1.00043C19.6397 0.859779 19.4489 0.780762 19.25
