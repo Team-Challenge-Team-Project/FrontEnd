@@ -1,3 +1,4 @@
+
 import './Home.styled.css'
 import ProductCard from '../../components/productCard/productCard'
 import JournalCard from '../../components/jornalCard/journalCard'
@@ -33,73 +34,75 @@ export const Home = () => {
               8.21967 10.9384C8.36032 10.7978 8.55109 10.7188 8.75 10.7188H11.25C11.4489 10.7188 11.6397 10.7978 11.7803
                10.9384C11.921 11.0791 12 11.2698 12 11.4688C12 11.6677 11.921 11.8584 11.7803 11.9991C11.6397 12.1397
                11.4489 12.2188 11.25 12.2188H8.75C8.55109 12.2188 8.36032 12.1397 8.21967 11.9991C8.07902 11.8584 8
-               11.6677 8 11.4688Z'
-              fill='black' />
-          </svg>
-        </button>
-        <button className='filter__button'>Women</button>
-        <button className='filter__button'>Men</button>
-        <div className='filter__sort'>
-          <p> Sort by</p>
-          <SvgFinder
-            src='arrow-bottom.svg'
-            className='arrow__bottom'
-            alt='arrow'
-          />
-        </div>
-      </div>
-      <div className='products__count'>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-      </div>
-      <button className='new-products__button'>Shop New Arrivals</button>
-    </section>
-    <section className='our-looks__count'>
-      <h3 className='our-looks__title'>Our Looks</h3>
-      <div className='carousel__count'>
-        <div className='carousel__arrow carousel__left-arrow'>
-          <SvgFinder
-            src='arrow-left.svg'
-            className='arrow__left'
-            alt='arrow'
-          />
-        </div>
-        <div className='carousel__main-photo'>
-          <ImageFinder
-            src='Rectangle 636.png'
-            className='big__img'
-            alt='IMG'
-          />
-        </div>
-        <div className='carousel__more-info'>
-          <ProductCard />
-          <button className='carousel__button'>View This Product</button>
-          <div className='carousel__pagination_count'>
-            <div className='carousel__pagination carousel__pagination_active'></div>
-            <div className='carousel__pagination'></div>
-            <div className='carousel__pagination'></div>
+               11.6677 8 11.4688Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <button className="filter__button">Women</button>
+          <button className="filter__button">Men</button>
+          <div className="filter__sort">
+            <p> Sort by</p>
+            <SvgFinder
+              src="arrow-bottom.svg"
+              className="arrow__bottom"
+              alt="arrow"
+            />
           </div>
         </div>
-        <div className='carousel__arrow carousel__right-arrow'>
-          <SvgFinder
-            src='arrow-right.svg'
-            className='arrow__right'
-            alt='arrow'
-          />
+        <div className="products__count cards">
+          <ProductCard src="newin1.jpeg" />
+          <ProductCard src="newin2.jpeg" />
+          <ProductCard src="newin3.jpeg" />
+          <ProductCard src="newin4.jpeg" />
         </div>
-      </div>
-    </section>
-    <section className='journal'>
-      <h3 className='journal__title'>The Journal</h3>
-      <div className='journal__count'>
-        <JournalCard />
-        <JournalCard />
-        <JournalCard />
-        <JournalCard />
-      </div>
-      <button className='journal__button'>View More Stories</button>
-    </section>
-  </div>
-}
+        <button className="new-products__button">Shop New Arrivals</button>
+      </section>
+      <section className="our-looks__count">
+        <h3 className="our-looks__title">Our Looks</h3>
+        <div className="carousel__count">
+          <div className="carousel__arrow carousel__left-arrow">
+            <SvgFinder
+              src="arrow-left.svg"
+              className="arrow__left"
+              alt="arrow"
+            />
+          </div>
+          <div className="carousel__main-photo">
+            <ImageFinder
+              src="Rectangle 636.png"
+              className="big__img"
+              alt="IMG"
+            />
+          </div>
+          <div className="carousel__more-info">
+            <ProductCard src="newin1.jpeg" />
+            <button className="carousel__button">View This Product</button>
+            <div className="carousel__pagination_count">
+              <div className="carousel__pagination carousel__pagination_active"></div>
+              <div className="carousel__pagination"></div>
+              <div className="carousel__pagination"></div>
+            </div>
+          </div>
+          <div className="carousel__arrow carousel__right-arrow">
+            <SvgFinder
+              src="arrow-right.svg"
+              className="arrow__right"
+              alt="arrow"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="journal">
+        <h3 className="journal__title">The Journal</h3>
+        <div className="journal__count">
+          <JournalCard />
+          <JournalCard />
+          <JournalCard />
+          <JournalCard />
+        </div>
+        <button className="journal__button">View More Stories</button>
+      </section>
+    </div>
+  );
+};

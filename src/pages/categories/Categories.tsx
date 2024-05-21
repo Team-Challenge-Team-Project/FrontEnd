@@ -1,18 +1,19 @@
 import { ImageFinder, SvgFinder } from '../../Helper';
 import { Breadcrumb } from '../../components/common/breadcrumb/breadcrumb';
 import { Pagination } from '../../components/common/pagination/pagination';
+import ProductCard from '../../components/productCard/productCard';
 import { categoriesData } from '../../utils/fakeCategoriesData';
 import './Categories.style.css';
 
 export const Categories = () => {
   return (
-    <div className="categories">
+    <main className="categories">
       <Breadcrumb />
 
       <div className="categories__filters">
         <div className="categories__row">
           <button className="categories__filters-button-filters">
-            Filters <SvgFinder src="filter.svg" />
+            Filters <SvgFinder src="filter.svg" className="" alt="filter" />
           </button>
           <button className="categories__filters-button-sort">
             Sort by
@@ -21,32 +22,15 @@ export const Categories = () => {
         </div>
       </div>
 
-      <div className="categories__cards">
+      <div className="categories__cards cards">
         {categoriesData.map((category) => (
-          <div className="categories__card" key={category.id}>
-            <div className="categories__card-img">
-              <ImageFinder
-                alt={category.title}
-                src={category.img}
-                className="categories__card_img"
-              />
-              <SvgFinder
-                src="favorite.svg"
-                className="categories__card-img-favorite"
-              />
-            </div>
-            <div className="categories__card-header">
-              <h4>{category.title}</h4>
-              <p>{category.text}</p>
-              <p>{category.price}</p>
-            </div>
-          </div>
+          <ProductCard src={category.img} key={category.id} />
         ))}
       </div>
 
       <div className="categories__pagination">
         <Pagination />
       </div>
-    </div>
+    </main>
   );
 };
