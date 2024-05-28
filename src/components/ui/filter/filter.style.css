@@ -1,0 +1,56 @@
+.filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+}
+
+.filter__count {
+    position: fixed;
+    top: 0;
+    /*left: -50vw;*/
+    left: 0;
+    width: 446px;
+    height: 100vh;
+    background: #FFFCF4;
+    transition: left 0.3s ease;
+    z-index: 200;
+    padding: 40px 40px 70px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filter__title_count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+}
+
+.filter__close {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.filter__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter__button_clear {
+    width: 167px;
+    background-color: #FFFFFF;
+    color: #565656;
+}
+
+.filter__buttons_apply{
+    width: 167px;
+    background-color: #212121;
+    color: #FFFFFF;
+}
