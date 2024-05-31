@@ -1,17 +1,80 @@
-.filter__item {
-    flex-grow: 1;
+.filter__sex {
+    margin: 0 0 32px 0;
 }
 
-.filter__item_title{
+.filter__sex_title {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    border-bottom: #565656 1px solid;
     padding: 0 0 8px 0;
+    margin: 0 0 16px 0;
+    transition: 0.3s all;
 }
 
-.filter__item_arrow{
+.filter__sex_title_open {
+    border-bottom: #565656 1px solid;
+}
+
+.filter__sex_title h5 {
+    transition: 0.3s all;
+}
+
+.filter__sex_title_open h5 {
+    font-weight: bold;
+}
+
+.filter__sex_arrow {
     width: 9px;
     height: 23px;
     padding: 5px 0 0 0;
+    transition: 0.3s all;
+}
+
+.filter__sex_title_open img {
+    transform: rotate(90deg) translate(5px, 0);
+    width: 10px;
+}
+
+.sex__item_count {
+    padding: 0 0 0 20px;
+    display: none;
+}
+
+.sex__item_count_open {
+    display: block;
+}
+
+.sex__item_title {
+    margin: 0 0 8px 0;
+    cursor: pointer;
+}
+
+.sex__list_count {
+    padding: 0 0 0 17px;
+    display: none;
+}
+
+
+.sex__list_count_open {
+    display: block;
+}
+
+.sex__list_item_count {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.sex__list_item_square {
+    width: 16px;
+    height: 16px;
+    border: #565656 1.5px solid;
+    border-radius: 4px;
+    margin: 0 21px 0 0;
+    padding: 15px 0 0 0;
+}
+
+.sex__list_count h5 {
+    margin: 0 0 1px 0;
 }
