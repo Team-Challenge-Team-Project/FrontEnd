@@ -1,7 +1,7 @@
-import { ImageFinder, SvgFinder } from '../../Helper';
+import { ProductCard } from 'src/components/productCard';
+import { SvgFinder } from '../../Helper';
 import { Breadcrumb } from '../../components/common/breadcrumb/breadcrumb';
-import { Pagination } from '../../components/common/pagination/pagination';
-import ProductCard from '../../components/productCard/productCard';
+import { Pagination } from '../../components/ui/pagination/pagination';
 import { categoriesData } from '../../utils/fakeCategoriesData';
 import './Categories.style.css';
 
@@ -24,7 +24,7 @@ export const Categories = () => {
 
       <div className="categories__cards cards">
         {categoriesData.map((category) => (
-          <ProductCard src={category.img} key={category.id} />
+          <ProductCard size="small" src={category.img} key={category.id} />
         ))}
       </div>
 

@@ -1,0 +1,59 @@
+.our-looks__carousel {
+  margin: 80px auto 0;
+  max-width: 1480px;
+}
+.carousel__container {
+  display: flex !important;
+  column-gap: 88px;
+  justify-content: center;
+  max-height: var(--carousel-height);
+}
+
+.carousel__container .carousel__poster {
+  flex: 0 1 auto;
+  width: 533px;
+  height: var(--carousel-height);
+}
+
+.carousel__container .carousel__look {
+  width: 340px;
+  flex: none;
+}
+
+/* poster */
+.poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__button {
+  margin: 24px 0;
+}
+
+/* look pagination, dots */
+.carousel__pagination li button {
+  border: 1px solid var(--border-color);
+}
+
+.carousel__pagination li,
+.carousel__pagination li button,
+.carousel__pagination li button:before {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.carousel__pagination .slick-dots li.slick-active button:before,
+.carousel__pagination .slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  background-color: var(--border-color);
+}
+
+.carousel__pagination li button:before {
+  color: transparent;
+}
+
+.carousel__look .slick-dots {
+  bottom: -123px;
+}

@@ -4,25 +4,24 @@
 }
 
 .main-board {
-    position: relative;
-    width: 100%;
-    height: 872px;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    padding: 0 0 72px 0;
-    margin: 0 0 56px 0;
-    border-bottom: #565656 1px solid;
+  position: relative;
+  width: 100%;
+  height: 872px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 0 0 72px 0;
+  margin: 0 0 56px 0;
+  border-bottom: #565656 1px solid;
 }
 
-
 .main-board__count {
-    background: url('../../assets/img/famaly.png') 0 0/100% auto no-repeat;
-    width: 120%;
-    height: 100%;
-    display: flex;
-    align-items: end;
-    padding: 0 0 84px 0;
+  background: url('../../assets/img/famaly.png') 0 0/100% auto no-repeat;
+  width: 120%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  padding: 0 0 84px 0;
 }
 
 .main-board__button-count {
@@ -52,11 +51,11 @@
 }
 
 .new-in {
-    text-align: center;
-    position: relative;
-    border-bottom: #565656 1px solid;
-    padding: 0 0 96px 0;
-    margin: 0 0 56px 0;
+  text-align: center;
+  position: relative;
+  border-bottom: #565656 1px solid;
+  padding: 0 0 96px 0;
+  margin: 0 0 56px 0;
 }
 
 .filter__buttons_count {
@@ -73,7 +72,7 @@
 }
 
 .filter__button {
-    margin: 0 15px 0 0;
+  margin: 0 15px 0 0;
 }
 
 .filter__button_filters p {
@@ -137,11 +136,11 @@
 }
 
 .our-looks__count {
-    text-align: center;
-    position: relative;
-    border-bottom: #565656 1px solid;
-    padding: 0 0 152px 0;
-    margin: 0 0 56px 0;
+  text-align: center;
+  position: relative;
+  border-bottom: #565656 1px solid;
+  padding: 0 0 152px 0;
+  margin: 0 0 56px 0;
 }
 
 .carousel__count {
@@ -153,11 +152,11 @@
 }
 
 .carousel__more-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 709px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 709px;
 }
 
 .carousel__arrow {
@@ -169,36 +168,12 @@
   opacity: 0.4;
 }
 
-.carousel__button {
-  margin: 50px 0 0 0;
-}
-
-.carousel__pagination_count {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100px;
-    margin: 20px auto;
-}
-
-.carousel__pagination {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: #000000 1px solid;
-  cursor: pointer;
-}
-
-.carousel__pagination_active {
-  background-color: #000000;
-}
-
 .journal {
-    text-align: center;
-    position: relative;
-    padding: 0 0 136px 0;
-    margin: 0 0 64px 0;
-    border-bottom: #565656 1px solid;
+  text-align: center;
+  position: relative;
+  padding: 0 0 136px 0;
+  margin: 0 0 64px 0;
+  border-bottom: #565656 1px solid;
 }
 
 .journal__count {

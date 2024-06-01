@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card > * {
+  flex: 1;
+}
+
+.card-small {
+  width: 315px;
+
+  height: 560px;
+}
+
+.card-middle {
+  width: 340px;
+  height: 593px;
+}
+
+.card-large {
+  width: 424px;
+  height: 696px;
+}
+
+.card__head-small {
+  width: 315px;
+  height: 415px;
+  margin: 0 0 24px;
+}
+
+.card__head-middle {
+  height: 448px;
+  width: 340px;
+  margin: 0 0 24px;
+}
+
+.card__head-large {
+  width: 480px;
+  height: 559px;
+  margin: 0 0 16px;
+}

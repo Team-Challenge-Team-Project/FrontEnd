@@ -21,6 +21,7 @@
   --button-color-white: #ffffff;
   --button-color-dark: #212121;
   --disable-button-color: #e0e0e0;
+  --border-color: #000;
 
   /* size headline */
   --h1-size: 2.188em; /* logo */
@@ -57,4 +58,8 @@
   --footer-padding: 64px 0;
   --footer-icon-size: 40px;
   --width-footer-icon: 40px;
+
+  /* carousel */
+  --carousel-padding: 176px;
+  --carousel-height: 720px;
 }

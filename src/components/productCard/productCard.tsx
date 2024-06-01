@@ -1,23 +1,48 @@
 import './productCard.style.css';
-import { ImageFinder, SvgFinder } from '../../Helper';
+import { ImageFinder } from '../../Helper';
+import Icon from '../ui/icon';
+import { Card, TPropsCard } from '../ui/card';
 
-type Props = {
-  src: string;
+type TProps = TPropsCard & {
+  src?: string;
+  title?: string;
+  description?: string;
+  price?: string;
 };
 
-const ProductCard = ({ src = 'girl.jpg' }: Props) => {
+export const ProductCard = ({
+  src = 'girl.jpg',
+  title = 'Brand Name',
+  description = 'Text Text Text',
+  price = '£154',
+  ...props
+}: TProps) => {
   return (
-    <div className="product__count">
-      <div className="product__like">
-        <SvgFinder src="heart.svg" className="product__like_svg" alt="heart" />
-      </div>
-      <div className="product__img">
-        <ImageFinder src={src} className="product__img_com" alt="product" />
-      </div>
-      <h4 className="product__brand">Brand Name</h4>
-      <p className="product__info">Text Text Text</p>
-      <p className="product__prise">100$</p>
-    </div>
+    <Card
+      {...props}
+      coverClassName="product__head"
+      cover={
+        <>
+          <div className="product__head-like">
+            <Icon type="Heart" className="product__head-like_svg" />
+          </div>
+          <div className="product__head-img">
+            <ImageFinder
+              src={src}
+              className="product__head-img_image"
+              alt="product"
+            />
+          </div>
+        </>
+      }
+      bodyClassName="product__body"
+      body={
+        <>
+          <h4 className="product__brand">{title}</h4>
+          <p className="product__info">{description}</p>
+          <p className="product__price">{price}</p>
+        </>
+      }
+    />
   );
 };
-export default ProductCard;
