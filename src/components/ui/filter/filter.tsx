@@ -1,9 +1,6 @@
 import './filter.style.css'
 import { SvgFinder } from '../../../Helper'
-import { FilterSex } from './filterSex/filterSex'
-import { FilterBrand } from './filterBrand/filterBrand'
-import { FilterSize } from './filterSize/filterSize'
-import { FilterPrise } from './filterPrise/filterPrise'
+import { FilterItem } from './filterItem/filterItem'
 
 
 export const Filter = () => {
@@ -15,10 +12,10 @@ export const Filter = () => {
           <SvgFinder src='close.svg' className='filter__close' alt='close' />
         </div>
         <div className='filter__item_count'>
-          <FilterSex />
-          <FilterBrand />
-          <FilterSize/>
-          <FilterPrise/>
+          <FilterItem />
+          <FilterItem />
+          <FilterItem/>
+          <FilterItem/>
         </div>
         <div className='filter__buttons'>
           <button className='filter__button_clear'>Clear All</button>
