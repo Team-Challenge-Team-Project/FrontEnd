@@ -1,9 +1,11 @@
 import './filter.style.css'
 import { SvgFinder } from '../../../Helper'
 import { FilterItem } from './filterItem/filterItem'
+import { filterItemPropsData } from './filertData'
 
 
 export const Filter = () => {
+
   return (
     <aside className='filter'>
       <div className='filter__count'>
@@ -12,10 +14,7 @@ export const Filter = () => {
           <SvgFinder src='close.svg' className='filter__close' alt='close' />
         </div>
         <div className='filter__item_count'>
-          <FilterItem />
-          <FilterItem />
-          <FilterItem/>
-          <FilterItem/>
+          {filterItemPropsData.map (i => <FilterItem key={i.id} {...i} />)}
         </div>
         <div className='filter__buttons'>
           <button className='filter__button_clear'>Clear All</button>
