@@ -2,9 +2,21 @@ import './Home.styled.css'
 import ProductCard from '../../components/productCard/productCard'
 import JournalCard from '../../components/jornalCard/journalCard'
 import { ImageFinder, SvgFinder } from '../../Helper'
+import { filterSlice } from '../../store/features/filterSlice'
+import { RootState } from '../../store/store';
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
 
 
 export const Home = () => {
+
+  const { openFilter } = filterSlice.actions
+  const isOpen = useAppSelector ((state: RootState) => state.filter.isOpen)
+  const dispatch = useAppDispatch ()
+
+  const handleClick = () => {
+    dispatch (openFilter (!isOpen))
+  }
+
   return <div className='main'>
     <section className='main-board'>
       <div className='main-board__count'>
@@ -17,7 +29,7 @@ export const Home = () => {
     <section className='new-in'>
       <h3 className='new-in__title'>New In</h3>
       <div className='filter__buttons_count'>
-        <button className='filter__button filter__button_filters'>
+        <button className='filter__button filter__button_filters' onClick={handleClick}>
           <p>Filters</p>
           <svg className='arrow-svg' width='20' height='13' viewBox='0 0 20 13' fill='none'
                xmlns='http://www.w3.org/2000/svg'>
