@@ -9,9 +9,9 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks'
 
 export const Home = () => {
 
+  const dispatch = useAppDispatch ()
   const { openFilter } = filterSlice.actions
   const isOpen = useAppSelector ((state: RootState) => state.filter.isOpen)
-  const dispatch = useAppDispatch ()
 
   const handleClick = () => {
     dispatch (openFilter (!isOpen))

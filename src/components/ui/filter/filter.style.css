@@ -1,27 +1,52 @@
 .filter {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
     background: rgba(255, 255, 255, 0.5);
     z-index: 100;
 }
 
+.filter__close {
+    width: 0;
+    height: 0;
+}
+
 .filter__count {
     position: fixed;
     top: 0;
-    /*left: -50vw;*/
     left: 0;
     width: 446px;
     height: 100vh;
     background: #FFFCF4;
-    transition: left 0.3s ease;
     z-index: 200;
     padding: 40px 40px 70px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    animation: filterOpen 0.5s
+}
+
+.filter__count__close {
+    left: -50vw;
+    animation: filterClose 0.5s
+}
+
+@keyframes filterOpen {
+    0% {
+        left: -50vw;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes filterClose {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -50vw;
+    }
 }
 
 .filter__title_count {
@@ -35,7 +60,13 @@
     flex-grow: 1;
 }
 
-.filter__close {
+.filter__img_count {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.filter__img_close {
     cursor: pointer;
     width: 18px;
     height: 18px;
