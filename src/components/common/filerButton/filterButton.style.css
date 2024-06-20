@@ -1,0 +1,11 @@
+.filter__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 127px;
+    line-height: 40.68px;
+}
+
+.no-scroll{
+    overflow: hidden;
+}

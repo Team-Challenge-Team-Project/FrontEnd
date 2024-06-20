@@ -1,0 +1,22 @@
+.item__sub_count {
+    margin: 0 0 8px 0;
+    cursor: pointer;
+}
+
+.item__sub_count__open {
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.sub__title__list_count {
+    margin: 0 0 0 17px;
+    display: none;
+}
+
+.sub__title__list_count__open {
+    display: block;
+}
+
+.sub__title__list_item {
+    cursor: pointer;
+}

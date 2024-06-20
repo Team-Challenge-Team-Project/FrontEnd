@@ -1,6 +1,7 @@
 import './filterItemSubTitle.style.css'
 import { TSubTitle } from '../types'
-// import classNames from 'classnames'
+import classNames from 'classnames'
+import { useState } from 'react'
 
 
 interface FilterItemSubTitleProps {
@@ -8,12 +9,29 @@ interface FilterItemSubTitleProps {
 }
 
 export const FilterItemSubTitle = ({ subTitleItems }: FilterItemSubTitleProps) => {
+
+  const [openIndexSubTitle, setOpenIndexSubTitle] = useState<number | null> (null)
+
+  const toggleSubTitle = (index: number) => {
+    setOpenIndexSubTitle (openIndexSubTitle === index ? null : index)
+  }
+
   return (
     <>
       {subTitleItems.map ((item, index) => (
-        <div key={index}
-             className='item__sub_count'>
-          <h5>{item.subTitleTitle}</h5>
+        <div key={index}>
+          <h5
+            className={classNames ('item__sub_count', { 'item__sub_count__open': openIndexSubTitle === index })}
+            onClick={() => toggleSubTitle (index)}>
+            {item.subTitleTitle}
+          </h5>
+          {subTitleItems[index].subTitleItem.map ((it, i) => (
+            <div key={i}
+                 className={classNames ('sub__title__list_count',
+                   { 'sub__title__list_count__open': openIndexSubTitle === index })}>
+              <h5 className='sub__title__list_item'>{it}</h5>
+            </div>
+          ))}
         </div>
       ))}
     </>

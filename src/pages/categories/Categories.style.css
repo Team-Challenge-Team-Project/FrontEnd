@@ -26,13 +26,13 @@
   margin-top: 40px;
 }
 
-.categories__filters-button-filters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 127px;
-  line-height: 40.68px;
-}
+/*.categories__filters-button-filters {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  max-width: 127px;*/
+/*  line-height: 40.68px;*/
+/*}*/
 
 .categories__filters-button-sort {
   display: flex;

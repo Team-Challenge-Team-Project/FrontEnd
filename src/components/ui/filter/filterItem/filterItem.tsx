@@ -32,7 +32,7 @@ export const FilterItem = (props: TFilterData) => {
         ) : props.radioItem ? (
           <FilterItemRadio radioItems={props.radioItem} onSelectedItemsChange={handleSelectedItemsChange} />
         ) : props.progressBarItem ? (
-          <FilterItemProgressBar />
+          <FilterItemProgressBar progressBarItems={props.progressBarItem}/>
         ) : null}
       </div>
     </div>

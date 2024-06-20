@@ -1,22 +1,13 @@
-import { ImageFinder, SvgFinder } from '../../Helper'
+import { SvgFinder } from '../../Helper'
 import { Breadcrumb } from '../../components/common/breadcrumb/breadcrumb'
 import { Pagination } from '../../components/common/pagination/pagination'
 import ProductCard from '../../components/productCard/productCard'
 import { categoriesData } from '../../utils/fakeCategoriesData'
 import './Categories.style.css'
-import { useAppDispatch, useAppSelector } from '../../store/hooks'
-import { filterSlice } from '../../store/features/filterSlice'
-import { RootState } from '../../store/store'
+import { FilerButton } from '../../components/common/filerButton/filterButton'
 
 export const Categories = () => {
 
-  const dispatch = useAppDispatch ()
-  const { openFilter } = filterSlice.actions
-  const isOpen = useAppSelector ((state: RootState) => state.filter.isOpen)
-
-  const handleClick = () => {
-    dispatch (openFilter (!isOpen))
-  }
 
   return (
     <main className='categories'>
@@ -24,13 +15,11 @@ export const Categories = () => {
 
       <div className='categories__filters'>
         <div className='categories__row'>
-          <button className='categories__filters-button-filters' onClick={handleClick}>
-            Filters <SvgFinder src='filter.svg' className='' alt='filter' />
-          </button>
-          <button className='categories__filters-button-sort'>
-            Sort by
-            <SvgFinder src='arrow-bottom.svg' />
-          </button>
+          <FilerButton/>
+            <button className='categories__filters-button-sort'>
+              Sort by
+              <SvgFinder src='arrow-bottom.svg' />
+            </button>
         </div>
       </div>
 
@@ -44,5 +33,5 @@ export const Categories = () => {
         <Pagination />
       </div>
     </main>
-  )
+)
 }
