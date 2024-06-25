@@ -1,9 +1,9 @@
 import './Home.styled.css';
 import JournalCard from '../../components/jornalCard/journalCard';
-import { ImageFinder, SvgFinder } from '../../Helper';
-import { Carousel } from '../../components/ui/carousel/carousel';
+import { SvgFinder } from '../../Helper';
 import { OurLooksCarousel } from '../../components/ourLooksCarousel/ourLooksCarousel';
 import { ProductCard } from 'src/components/productCard';
+import { ETypographyVariant, Typography } from 'src/components/ui/typography';
 
 export const Home = () => {
   return (
@@ -17,7 +17,14 @@ export const Home = () => {
         </div>
       </section>
       <section className="new-in">
-        <h3 className="new-in__title">New In</h3>
+        <Typography
+          className="new-in__title"
+          as="h2"
+          variant={ETypographyVariant.H2BoldHeading}
+        >
+          New In
+        </Typography>
+
         <div className="filter__buttons_count">
           <button className="filter__button filter__button_filters">
             <p>Filters</p>
@@ -66,11 +73,23 @@ export const Home = () => {
         <button className="new-products__button">Shop New Arrivals</button>
       </section>
       <section className="our-looks__count">
-        <h3 className="our-looks__title">Our Looks</h3>
+        <Typography
+          className="our-looks__title"
+          as="h2"
+          variant={ETypographyVariant.H2BoldHeading}
+        >
+          Our Looks
+        </Typography>
         <OurLooksCarousel />
       </section>
       <section className="journal">
-        <h3 className="journal__title">The Journal</h3>
+        <Typography
+          className="journal__title"
+          as="h2"
+          variant={ETypographyVariant.H2BoldHeading}
+        >
+          The Journal
+        </Typography>
         <div className="journal__count">
           <JournalCard />
           <JournalCard />
