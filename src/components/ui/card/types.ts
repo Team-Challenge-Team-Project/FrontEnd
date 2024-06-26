@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-export type TCardSizeProps = 'small' | 'middle' | 'large';
+export type TCardSizeProps = 'x-small' | 'small' | 'middle' | 'large';
 
-export type TPropsCard = {
+export type TCardProps = {
   className?: string;
   coverClassName?: string;
   bodyClassName?: string;

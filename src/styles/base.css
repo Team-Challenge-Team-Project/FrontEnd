@@ -65,25 +65,25 @@ h4,
 h5,
 h6 {
   letter-spacing: 0.14em;
-  line-height: 226%;
+  /* line-height: 226%; */
 }
-
+/* 
 h1 {
   font-size: var(--h1-size);
   font-weight: 500;
   font-family: 'Playfair Display';
-}
+} */
 
-h2 {
+/* h2 {
   font-size: var(--h2-size);
   font-weight: 600;
-}
+} */
 
-h3 {
+/* h3 {
   font-size: var(--h3-size);
   font-weight: 600;
   font-family: 'Playfair Display';
-}
+} */
 h4 {
   font-size: var(--h4-size);
 }
@@ -113,4 +113,8 @@ p {
 .icon img {
   width: 100%;
   height: 100%;
+}
+
+.text-red {
+  color: var(--text-red);
 }

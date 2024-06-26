@@ -8,9 +8,13 @@
   flex: 1;
 }
 
+.card-x-small {
+  height: 503px;
+  width: 315px;
+}
+
 .card-small {
   width: 315px;
-
   height: 560px;
 }
 

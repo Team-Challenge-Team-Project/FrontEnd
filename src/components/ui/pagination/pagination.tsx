@@ -1,21 +1,21 @@
-import { SvgFinder } from '../../../Helper';
+import clsx from 'clsx';
+import Button from '../button';
 import './pagination.style.css';
 // import _ from 'lodash';
 
-type Props = {
-  itemsCount: number;
-  pageSize: number;
-  currentPage: number;
-  onPageChange: void;
+type TPaginationProps = {
+  itemsCount?: number;
+  pageSize?: number;
+  currentPage?: number;
+  onPageChange?: () => void;
 };
 export const Pagination = ({
-  itemsCount,
-  pageSize,
-  onPageChange,
-  currentPage,
-}: Props) => {
+  itemsCount = 16,
+  pageSize = 2,
+  // onPageChange,
+  currentPage = 1,
+}: TPaginationProps) => {
   const pagesCount = Math.ceil(itemsCount / pageSize);
-
   if (pagesCount === 1) return null;
 
   //   const pages = _.range(1, pagesCount + 1);
@@ -23,22 +23,25 @@ export const Pagination = ({
 
   return (
     <nav className="pagination">
-      <button className="pagination__btn">
-        <SvgFinder src="left-circle-arrow.svg" />
-      </button>
+      <Button.Icon icon="LeftCircleArrow" className="pagination__btn" />
       <ul>
         {pages.map((page) => (
           <li
-            className={'page-item ' + (page === currentPage ? 'active' : '')}
+            className={clsx('page-item', {
+              'page-item__active': page === currentPage,
+            })}
             key={'page_' + page}
           >
-            <button className="pagination-link">{page}</button>
+            <Button
+              classes={{ button: 'pagination-link' }}
+              // onClick={() => onPageChange(page)}
+            >
+              {page}
+            </Button>
           </li>
         ))}
       </ul>
-      <button className="pagination__btn">
-        <SvgFinder src="right-circle-arrow.svg" />
-      </button>
+      <Button.Icon icon="RightCircleArrow" className="pagination__btn" />
     </nav>
   );
 };

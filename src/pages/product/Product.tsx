@@ -1,6 +1,7 @@
 import './Product.style.css';
 import { ImageFinder, SvgFinder } from '../../Helper';
 import { ProductCard } from 'src/components/productCard';
+import { ETypographyVariant, Typography } from 'src/components/ui/typography';
 
 export const Product = () => {
   return (
@@ -13,7 +14,13 @@ export const Product = () => {
         />
         <div className="main__product_info">
           <div className="product__brand_count">
-            <h2 className="product__brand_title">Chocoolate</h2>
+            <Typography
+              as="h2"
+              className="product__brand_title"
+              variant={ETypographyVariant.H2MediumHeading}
+            >
+              Chocoolate
+            </Typography>
             <div className="product__brand_like">
               <SvgFinder
                 src="heart.svg"
@@ -23,7 +30,10 @@ export const Product = () => {
             </div>
           </div>
           <div className="product__type_count">
-            <h3 className="product__type_title">Cotton Denim Jacket</h3>
+            <Typography as="h3" className="product__type_title">
+              Cotton Denim Jacket
+            </Typography>
+            {/* <h3 className="product__type_title">Cotton Denim Jacket</h3> */}
             <p className="product__type_prise">£ 154.00</p>
           </div>
           <div className="product__size_count">
@@ -53,7 +63,7 @@ export const Product = () => {
         <div className="product__description">
           <div className="product__details">
             <div className="product__details_title">
-              <h3>Details</h3>
+              <Typography as="h3">Details</Typography>
               <SvgFinder
                 src="arrow-bottom.svg"
                 className="product__details_arrow"
@@ -68,7 +78,7 @@ export const Product = () => {
           </div>
           <div className="product__details">
             <div className="product__details_title">
-              <h3>Materials and Fit</h3>
+              <Typography as="h3">Materials and Fit</Typography>
               <SvgFinder
                 src="arrow-bottom.svg"
                 className="product__details_arrow"
@@ -116,7 +126,9 @@ export const Product = () => {
         </div>
       </section>
       <section className="product__complete">
-        <h2>Complete the Look</h2>
+        <Typography as="h2" variant={ETypographyVariant.H2BoldHeading}>
+          Complete the Look
+        </Typography>
         <div className="complete__count">
           <ProductCard />
           <ProductCard />
@@ -124,7 +136,9 @@ export const Product = () => {
         </div>
       </section>
       <section className="product__recently">
-        <h2>Recently Viewed</h2>
+        <Typography as="h2" variant={ETypographyVariant.H2BoldHeading}>
+          Recently Viewed
+        </Typography>
         <div className="recently__count">
           <ProductCard />
           <ProductCard />

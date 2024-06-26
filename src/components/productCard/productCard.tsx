@@ -1,9 +1,10 @@
 import './productCard.style.css';
 import { ImageFinder } from '../../Helper';
 import Icon from '../ui/icon';
-import { Card, TPropsCard } from '../ui/card';
+import { Card, TCardProps } from '../ui/card';
+import { ETypographyVariant, Typography } from '../ui/typography';
 
-type TProps = TPropsCard & {
+type TProps = TCardProps & {
   src?: string;
   title?: string;
   description?: string;
@@ -38,9 +39,19 @@ export const ProductCard = ({
       bodyClassName="product__body"
       body={
         <>
-          <h4 className="product__brand">{title}</h4>
-          <p className="product__info">{description}</p>
-          <p className="product__price">{price}</p>
+          <Typography
+            as="h3"
+            className="product__brand"
+            variant={ETypographyVariant.TextS18Medium}
+          >
+            {title}
+          </Typography>
+          <Typography as="p" className="product__info">
+            {description}
+          </Typography>
+          <Typography as="p" className="product__price">
+            {price}
+          </Typography>
         </>
       }
     />

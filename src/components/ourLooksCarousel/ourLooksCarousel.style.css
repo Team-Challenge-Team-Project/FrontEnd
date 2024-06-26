@@ -51,7 +51,8 @@
 }
 
 .carousel__pagination li button:before {
-  color: transparent;
+  color: transparent !important;
+  opacity: 0 !important;
 }
 
 .carousel__look .slick-dots {

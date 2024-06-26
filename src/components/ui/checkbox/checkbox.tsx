@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import type { FC } from 'react';
 import { TCheckboxProps } from './types';
 
-export const Checkbox: FC<TCheckboxProps> = ({
+const Checkbox: FC<TCheckboxProps> = ({
   checked,
   type = 'checkbox',
   defaultChecked,

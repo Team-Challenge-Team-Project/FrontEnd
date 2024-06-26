@@ -19,5 +19,17 @@ export const publicRoutes = [
   {
     path: CATEGORIES_PAGE_ROUTE,
     Component: Categories,
+    children: [
+      {
+        path: ':category',
+        Component: Categories,
+        children: [
+          {
+            path: ':type',
+            Component: Categories,
+          },
+        ],
+      },
+    ],
   },
 ];

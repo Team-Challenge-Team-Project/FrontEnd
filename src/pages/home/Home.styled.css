@@ -67,7 +67,7 @@
 .filter__buttons_count {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 24px 0 0 0;
 }
 
@@ -149,6 +149,8 @@
   margin: 0 0 56px 0;
 }
 
+/* carousel */
+
 .carousel__count {
   display: flex;
   align-items: center;
@@ -174,11 +176,13 @@
   opacity: 0.4;
 }
 
+/* journal */
+
 .journal {
   text-align: center;
   position: relative;
-  padding: 0 0 136px 0;
-  margin: 0 0 64px 0;
+  padding: 0 0 144px;
+  margin: 0 0 64px;
   border-bottom: #565656 1px solid;
 }
 
@@ -186,6 +190,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 0 70px 0;
+  margin: 72px 0 144px 0;
   flex-wrap: wrap;
+  gap: 20px;
 }

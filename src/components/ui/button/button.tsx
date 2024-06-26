@@ -3,7 +3,6 @@ import { TButton, TClasses } from './types';
 import Icon, { IconType } from '../icon';
 
 export interface IButtonProps extends DOMAttributes<HTMLButtonElement> {
-  className?: string;
   isActive?: boolean;
   isDisabled?: boolean;
   onClick?: (event?: MouseEvent<HTMLButtonElement>) => void;

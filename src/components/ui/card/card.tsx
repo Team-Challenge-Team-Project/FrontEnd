@@ -1,16 +1,16 @@
 import clsx from 'clsx';
 import './card.style.css';
 import { ECardSize } from './enums';
-import { TPropsCard } from './types';
+import { TCardProps } from './types';
 
 export const Card = ({
   className,
-  size = 'small',
+  size = ECardSize.small,
   cover,
   coverClassName,
   bodyClassName,
   body,
-}: TPropsCard) => {
+}: TCardProps) => {
   const headDom = cover ? (
     <div className={clsx(coverClassName || 'card-head', `card__head-${size}`)}>
       {cover}

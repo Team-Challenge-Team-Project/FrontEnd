@@ -9,5 +9,5 @@ type TProps = {
 };
 
 export const Icon = ({ type, className }: TProps) => {
-  return <div className={clsx(className || 'icon')}>{getIcon(type)}</div>;
+  return <div className={clsx(className, 'icon')}>{getIcon(type)}</div>;
 };

@@ -11,19 +11,13 @@
   background-color: #565656;
 }
 
-.breadcrumb li:not(:last-child)::after {
-  display: inline-block;
-  margin: 0 0.25rem;
-  content: '>';
-  width: 18px;
-  height: 9px;
-  top: 18px;
-  gap: 0px;
-  border: 1.5px 0px 0px 0px;
+.categories__breadcrumb {
+  margin: 56px 0 0;
 }
 
+/* filters */
 .categories__filters {
-  margin-top: 40px;
+  margin: 51px 0 0;
 }
 
 .categories__filters-button-filters {
@@ -34,7 +28,90 @@
   line-height: 40.68px;
 }
 
-.categories__filters-button-sort {
+.categories__filters-dropdown-sort {
+  .filter-icon {
+    width: 12px;
+  }
+
+  .dropdown__sort-btn {
+    font-size: 18px;
+    letter-spacing: 0.14em;
+    line-height: 40.68px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 9px;
+  }
+  .dropdown__sort-panel {
+    width: 237px;
+    padding: 24px 36px;
+    left: -135px;
+  }
+
+  .dropdown__checkbox-sort {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    letter-spacing: 0.14em;
+    line-height: 36.16px;
+  }
+
+  .checkbox__item-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+
+    .checkbox__input {
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid #565656;
+      border-radius: 50%;
+    }
+
+    .checkbox__input:hover {
+      color: #212121;
+    }
+
+    .checkbox__input:checked {
+      accent-color: #212121;
+      appearance: none;
+      -webkit-appearance: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      padding: 0.1rem;
+      border: 1px solid #565656;
+      border-radius: 50%;
+    }
+
+    .checkbox__input::before {
+      content: '';
+      width: 24.89px;
+      height: 24.89px;
+      border-radius: 50%;
+      background-color: #212121;
+    }
+
+    .checkbox__input::before:hover {
+      color: #212121;
+    }
+  }
+
+  .checkbox__label {
+    cursor: pointer;
+  }
+  .checkbox__item-wrapper:hover {
+    transform: scale(1.1);
+    transition: all 300ms ease;
+  }
+}
+
+.categories__filters-button-sort__btn {
   display: flex;
   align-items: center;
   border: none;
@@ -112,6 +189,7 @@
 .categories__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .categories__pagination {

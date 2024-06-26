@@ -3,8 +3,14 @@ import { useDropDownContext } from 'src/hooks/useDropDown';
 import clsx from 'clsx';
 import { TDropDownButtonProps } from '../types';
 import { EDropDownButtonTrigger } from '../enums';
+import Icon from '../../icon';
+import { type } from '../../../ourLooksCarousel/components/types';
 
-const DropDownButton: FC<TDropDownButtonProps> = ({ children, classes }) => {
+const DropDownButton: FC<TDropDownButtonProps> = ({
+  children,
+  classes,
+  icon,
+}) => {
   const dropDownState = useDropDownContext();
 
   const buttonProps = {
@@ -24,7 +30,12 @@ const DropDownButton: FC<TDropDownButtonProps> = ({ children, classes }) => {
     className: clsx('dropdown__button', classes?.dropDownButton),
   };
 
-  return <div {...buttonProps}>{children}</div>;
+  return (
+    <div {...buttonProps}>
+      {children}{' '}
+      {icon && <Icon type={icon} className={classes?.dropdownButtonIcon} />}
+    </div>
+  );
 };
 
 export default DropDownButton;

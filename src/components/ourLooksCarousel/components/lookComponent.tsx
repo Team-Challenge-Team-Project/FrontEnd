@@ -1,5 +1,5 @@
-import { Carousel } from '../../ui/carousel/carousel';
 import { ProductCard } from 'src/components/productCard';
+import { Carousel } from '../../ui/carousel/carousel';
 import { TLookDataProps } from './types';
 
 export const LookComponent = ({ look }: TLookDataProps) => {

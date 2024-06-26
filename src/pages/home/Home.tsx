@@ -1,9 +1,9 @@
 import './Home.styled.css';
-import JournalCard from '../../components/jornalCard/journalCard';
-import { SvgFinder } from '../../Helper';
-import { OurLooksCarousel } from '../../components/ourLooksCarousel/ourLooksCarousel';
 import { ProductCard } from 'src/components/productCard';
 import { ETypographyVariant, Typography } from 'src/components/ui/typography';
+import Button from 'src/components/ui/button';
+import { OurLooksCarousel } from 'src/components/ourLooksCarousel';
+import { JournalCard } from 'src/components/journalCard';
 
 export const Home = () => {
   return (
@@ -11,8 +11,12 @@ export const Home = () => {
       <section className="main-board">
         <div className="main-board__count">
           <div className="main-board__button-count">
-            <button className="main-board__button">Shop for Her</button>
-            <button className="main-board__button">Shop for Him</button>
+            <Button classes={{ button: 'main-board__button' }}>
+              Shop for Her
+            </Button>
+            <Button classes={{ button: 'main-board__button' }}>
+              Shop for Him
+            </Button>
           </div>
         </div>
       </section>
@@ -53,16 +57,16 @@ export const Home = () => {
               />
             </svg>
           </button>
-          <button className="filter__button">Women</button>
-          <button className="filter__button">Men</button>
-          <div className="filter__sort">
+          <Button classes={{ button: 'filter__button' }}>Women</Button>
+          <Button classes={{ button: 'filter__button' }}>Men</Button>
+          {/* <div className="filter__sort">
             <p> Sort by</p>
             <SvgFinder
               src="arrow-bottom.svg"
               className="arrow__bottom"
               alt="arrow"
             />
-          </div>
+          </div> */}
         </div>
         <div className="products__count cards">
           <ProductCard src="newin1.jpeg" />
@@ -70,7 +74,9 @@ export const Home = () => {
           <ProductCard src="newin3.jpeg" />
           <ProductCard src="newin4.jpeg" />
         </div>
-        <button className="new-products__button">Shop New Arrivals</button>
+        <Button classes={{ button: 'new-products__button' }}>
+          Shop New Arrivals
+        </Button>
       </section>
       <section className="our-looks__count">
         <Typography
@@ -96,7 +102,9 @@ export const Home = () => {
           <JournalCard />
           <JournalCard />
         </div>
-        <button className="journal__button">View More Stories</button>
+        <Button classes={{ button: 'journal__button' }}>
+          View More Stories
+        </Button>
       </section>
     </div>
   );
