@@ -1,9 +1,9 @@
 .dropdown {
   position: relative;
-  cursor: pointer;
 }
 
 .dropdown__button {
+  cursor: pointer;
 }
 
 .dropdown__panel {
