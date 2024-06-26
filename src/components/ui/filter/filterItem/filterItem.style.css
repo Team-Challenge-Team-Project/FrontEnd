@@ -1,0 +1,45 @@
+.filter__item {
+    margin: 0 0 32px 0;
+}
+
+.filter__item_title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 0 8px 0;
+    margin: 0 0 16px 0;
+    transition: 0.3s all;
+}
+
+.filter__item_title h5 {
+    transition: 0.3s all;
+}
+
+.filter__item_title_open {
+    border-bottom: #565656 1px solid;
+}
+
+.filter__item_title_open h4 {
+    font-weight: bold;
+}
+
+.filter__item_arrow {
+    width: 9px;
+    height: 23px;
+    padding: 5px 0 0 0;
+    transition: 0.3s all;
+}
+
+.filter__item_title_open img {
+    transform: rotate(90deg) translate(5px, 0);
+    width: 10px;
+}
+
+.item__list_count {
+    display: none;
+    padding: 16px 0 0 20px;
+}
+
+.item__list_count_open {
+    display: block;
+}

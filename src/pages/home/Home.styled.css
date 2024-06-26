@@ -35,6 +35,10 @@
   align-items: center;
   justify-content: space-around;
   margin: 0 0 84px;
+  /* width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; */
 }
 
 .main-board__button {
@@ -69,6 +73,12 @@
   align-items: center;
   justify-content: flex-start;
   margin: 24px 0 0 0;
+  /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 0 0;
+    column-gap: 24px;
+    width: 350px; */
 }
 
 .filter__button_filters {
@@ -177,6 +187,29 @@
 }
 
 /* journal */
+.carousel__button {
+  margin: 50px 0 0 0;
+}
+
+.carousel__pagination_count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  margin: 20px auto;
+}
+
+.carousel__pagination {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: #000000 1px solid;
+  cursor: pointer;
+}
+
+.carousel__pagination_active {
+  background-color: #000000;
+}
 
 .journal {
   text-align: center;
@@ -193,4 +226,9 @@
   margin: 72px 0 144px 0;
   flex-wrap: wrap;
   gap: 20px;
+  /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0 70px 0;
+    flex-wrap: wrap; */
 }
