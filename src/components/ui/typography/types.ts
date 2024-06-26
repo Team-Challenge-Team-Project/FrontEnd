@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MouseEvent, ReactNode } from 'react';
 import { ETypographyVariant } from './enums';
 
 export type TTypographyVariants = 'h1' | 'h2' | 'h3' | 'span' | 'p';
@@ -18,4 +18,5 @@ export type TTypographyProps = {
   htmlFor?: string;
   className?: string;
   variant?: ETypographyVariant;
+  onClick?: (event: MouseEvent<HTMLDivElement>) => void;
 };

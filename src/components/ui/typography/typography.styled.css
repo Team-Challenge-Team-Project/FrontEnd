@@ -1,6 +1,7 @@
 .Typography {
   font-size: var(--base-text-font-size);
-
+  letter-spacing: 0.14em;
+  line-height: 36.16px;
   &.text-h1,
   &.text-h2 {
     &.heading {

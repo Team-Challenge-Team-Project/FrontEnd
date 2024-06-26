@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { TSortBy } from 'src/pages/categories/Categories';
 
 export type TCheckboxProps = {
   key?: React.Key;
@@ -25,5 +25,5 @@ export type TCheckboxGroupProps = {
   options?: TCheckboxGroupOptions[];
   defaultChecked?: string;
   className?: string;
-  onChange?: (value: ReactNode) => void;
+  onChange?: (value: TSortBy) => void;
 };

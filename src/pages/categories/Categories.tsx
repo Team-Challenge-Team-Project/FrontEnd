@@ -7,7 +7,7 @@ import Breadcrumb from 'src/components/ui/breadcrumb';
 import DropDown from 'src/components/ui/dropDown';
 import { useState } from 'react';
 import Checkbox from 'src/components/ui/checkbox';
-import Button from 'src/components/ui/button';
+import { FilerButton } from 'src/components/common/filerButton/filterButton';
 
 const categoriesSortBy = [
   {
@@ -64,7 +64,8 @@ export const Categories = () => {
 
       <div className="categories__filters">
         <div className="categories__row">
-          <Button
+          <FilerButton />
+          {/* <Button
             classes={{
               button: 'categories__filters-button-filters',
               icon: 'categories__filters-button-icon',
@@ -72,7 +73,7 @@ export const Categories = () => {
             icon="FilterDown"
           >
             Filters
-          </Button>
+          </Button> */}
 
           <DropDown
             trigger="hover"

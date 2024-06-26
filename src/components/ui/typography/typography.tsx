@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { TYPOGRAPHY_VARIANTS } from './constants';
 import { ETypographyVariant } from './enums';
 
-const Component: FC<TTypographyProps> = ({
+const TypographyComponent: FC<TTypographyProps> = ({
   as = 'span',
   children,
   className,
@@ -14,21 +14,26 @@ const Component: FC<TTypographyProps> = ({
   weight,
   variant = ETypographyVariant.TextRegular,
   htmlFor,
+  ...rest
 }) => {
   const currentVariant = TYPOGRAPHY_VARIANTS()[variant];
   const Tag = `${as}` as keyof JSX.IntrinsicElements;
 
-  const props = {
+  const props: Record<string, unknown> = {
     className: clsx(className, currentVariant, {
       [`text-${color}`]: color,
       [`text-${weight}`]: weight,
       [`text-${as}`]: as,
       [`font-${size}`]: size,
     }),
-    htmlFor,
+    ...rest,
   };
+
+  if (Tag === 'label' && htmlFor) {
+    props.htmlFor = htmlFor;
+  }
 
   return <Tag {...props}>{children}</Tag>;
 };
 
-export const Typography = memo(Component);
+export const Typography = memo(TypographyComponent);
