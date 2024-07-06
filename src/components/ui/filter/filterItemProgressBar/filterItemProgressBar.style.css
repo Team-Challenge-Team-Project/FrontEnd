@@ -23,10 +23,26 @@
     color: #565656;
 }
 
+.progress-bar__input {
+    height: 52px;
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: #565656 0.5px solid;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #565656;
+    /*width: calc(100% - 32px);*/
+    box-sizing: border-box;
+}
+
 .progress-bar__window_pass {
     font-weight: 400;
     font-size: 25px;
     line-height: 56.5px;
+    margin: 0 5px;
 }
 
 .progress-bar__scroll_count {
