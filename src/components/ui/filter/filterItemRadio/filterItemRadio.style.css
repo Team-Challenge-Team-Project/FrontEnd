@@ -1,0 +1,23 @@
+.item__radio_count {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item__radio_square {
+  width: 16px;
+  height: 16px;
+  border: #565656 1.5px solid;
+  border-radius: 4px;
+  margin: 0 21px 0 0;
+  padding: 15px 0 0 0;
+}
+
+.item__radio_square_open {
+  background-color: #212121;
+}
+
+.item__radio_count h5 {
+  position: relative;
+  top: 2px;
+}

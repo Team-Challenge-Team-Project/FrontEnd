@@ -1,19 +1,59 @@
-import './productCard.style.css'
-import productImg from '../../assets/img/Frame 525.png'
-import like from '../../assets/svg/like.svg'
+import './productCard.style.css';
+import { ImageFinder } from '../../Helper';
+import Icon from '../ui/icon';
+import { Card, TCardProps } from '../ui/card';
+import { ETypographyVariant, Typography } from '../ui/typography';
 
+type TProps = TCardProps & {
+  src?: string;
+  title?: string;
+  description?: string;
+  price?: string;
+};
 
-const ProductCard = () => {
-  return <div className='product__count'>
-    <div className='product__like'>
-      <img src={like} alt='like' />
-    </div>
-    <div className='product__img'>
-      <img src={productImg} alt='product' />
-    </div>
-    <div className='product__brand'>Brand Name</div>
-    <div className='product__info'>Text Text Text</div>
-    <div className='product__prise'>100$</div>
-  </div>
-}
-export default ProductCard
+export const ProductCard = ({
+  src = 'girl.jpg',
+  title = 'Brand Name',
+  description = 'Text Text Text',
+  price = '£154',
+  ...props
+}: TProps) => {
+  return (
+    <Card
+      {...props}
+      coverClassName="product__head"
+      cover={
+        <>
+          <div className="product__head-like">
+            <Icon type="Heart" className="product__head-like_svg" />
+          </div>
+          <div className="product__head-img">
+            <ImageFinder
+              src={src}
+              className="product__head-img_image"
+              alt="product"
+            />
+          </div>
+        </>
+      }
+      bodyClassName="product__body"
+      body={
+        <>
+          <Typography
+            as="h3"
+            className="product__brand"
+            variant={ETypographyVariant.TextS18Medium}
+          >
+            {title}
+          </Typography>
+          <Typography as="p" className="product__info">
+            {description}
+          </Typography>
+          <Typography as="p" className="product__price">
+            {price}
+          </Typography>
+        </>
+      }
+    />
+  );
+};

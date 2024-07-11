@@ -1,0 +1,52 @@
+import './filterItemRadio.style.css';
+import { TRadioItem } from '../types';
+import { useState, useEffect } from 'react';
+import classNames from 'classnames';
+import { Typography } from '../../typography';
+
+interface FilterItemRadioProps {
+  radioItems: TRadioItem;
+  onSelectedItemsChange: (selectedIndices: number[]) => void;
+}
+
+export const FilterItemRadio = ({
+  radioItems,
+  onSelectedItemsChange,
+}: FilterItemRadioProps) => {
+  const [selectedIndices, setSelectedIndices] = useState<number[]>([]);
+
+  useEffect(() => {
+    onSelectedItemsChange(selectedIndices);
+  }, [selectedIndices, onSelectedItemsChange]);
+
+  const choiceRadioItem = (index: number) => {
+    setSelectedIndices((prevSelected) => {
+      if (prevSelected.includes(index)) {
+        return prevSelected.filter((i) => i !== index);
+      } else {
+        return [...prevSelected, index];
+      }
+    });
+  };
+
+  return (
+    <>
+      {radioItems.map((item, index) => (
+        <div
+          key={index}
+          className="item__radio_count"
+          onClick={() => choiceRadioItem(index)}
+        >
+          <div
+            className={classNames('item__radio_square', {
+              item__radio_square_open: selectedIndices.includes(index),
+            })}
+          ></div>
+          <Typography as="span" className="item__radio-item">
+            {item}
+          </Typography>
+        </div>
+      ))}
+    </>
+  );
+};
