@@ -5,6 +5,7 @@ import DropDown from '../../ui/dropDown';
 import { menuItems } from 'src/utils/headerData';
 import { ETypographyVariant, Typography } from 'src/components/ui/typography';
 import clsx from 'clsx';
+import Auth from '../auth/auth';
 
 export const Header = () => {
   return (
@@ -77,13 +78,14 @@ export const Header = () => {
             alt="earth"
           />
         </div>
-        <div className="links__button">
+        <Auth />
+        {/* <div className="links__button">
           <SvgFinder
             src="login.svg"
             className="links__button_img"
             alt="login"
           />
-        </div>
+        </div> */}
         <div className="links__button">
           <SvgFinder src="bag.svg" className="links__button_img" alt="bag" />
         </div>

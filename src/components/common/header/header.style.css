@@ -73,8 +73,13 @@
   width: 37px;
   height: 37px;
   position: relative;
-  padding: 10px;
+  padding: 0;
   cursor: pointer;
+  border: none;
+}
+
+.links__button:hover {
+  box-shadow: none;
 }
 
 .links__button_img {
