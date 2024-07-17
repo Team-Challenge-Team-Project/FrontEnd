@@ -31,7 +31,7 @@ export const Home = () => {
         </Typography>
 
         <div className="filter__buttons_count">
-          <FilerButton />
+          <FilterButton />
           <Button classes={{ button: 'filter__button' }}>Women</Button>
           <Button classes={{ button: 'filter__button' }}>Men</Button>
         </div>
