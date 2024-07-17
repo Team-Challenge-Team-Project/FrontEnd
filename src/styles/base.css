@@ -65,26 +65,26 @@ h4,
 h5,
 h6 {
   letter-spacing: 0.14em;
-  line-height: 226%;
+  /* line-height: 226%; */
 }
-
+/* 
 h1 {
   font-size: var(--h1-size);
   font-weight: 500;
   font-family: 'Playfair Display';
-}
+} */
 
-h2 {
+/* h2 {
   font-size: var(--h2-size);
   font-weight: 600;
-}
+} */
 
-h3 {
+/* h3 {
   font-size: var(--h3-size);
   font-weight: 600;
   font-family: 'Playfair Display';
-}
-` h4 {
+} */
+h4 {
   font-size: var(--h4-size);
 }
 
@@ -92,14 +92,29 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 64px 20px;
+  justify-content: space-around;
 }
-
+/* 
 .cards > * {
   flex: 0 0 var(--width-default-product-card);
-}
+} */
 /* 
 p {
   font-size: var(--p-size);
   line-height: 25px;
   font-weight: 400;
 } */
+
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-red {
+  color: var(--text-red);
+}

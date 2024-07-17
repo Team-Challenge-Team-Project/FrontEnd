@@ -16,16 +16,17 @@
   --background-color: #fffcf4;
   --text-color: #000000;
   --stroke-color: #565656;
-  --attention-message-color: #e24545;
   --hover-button-color: #000000;
   --button-color-white: #ffffff;
   --button-color-dark: #212121;
   --disable-button-color: #e0e0e0;
+  --border-color: #000;
+  --text-red: #e24545;
 
   /* size headline */
-  --h1-size: 2.188em; /* logo */
-  --h2-size: 1.313em; /* header-links, "New In", "Our looks" */
-  --h3-size: 1.125em; /* button, "brand name" 18px*/
+  --h1-size: 35px; /* logo */
+  --h2-size: 21px; /* header-links, "New In", "Our looks" */
+  --h3-size: 18px; /* button, "brand name" 18px*/
   --h4-size: 1.125em;
   --h5-size: 1em;
 
@@ -57,4 +58,8 @@
   --footer-padding: 64px 0;
   --footer-icon-size: 40px;
   --width-footer-icon: 40px;
+
+  /* carousel */
+  --carousel-padding: 176px;
+  --carousel-height: 720px;
 }

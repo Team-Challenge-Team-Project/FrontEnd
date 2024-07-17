@@ -1,7 +1,8 @@
-import './filterItemRadio.style.css'
-import { TRadioItem } from '../types'
-import { useState, useEffect } from 'react'
-import classNames from 'classnames'
+import './filterItemRadio.style.css';
+import { TRadioItem } from '../types';
+import { useState, useEffect } from 'react';
+import classNames from 'classnames';
+import { Typography } from '../../typography';
 
 interface FilterItemRadioProps {
   radioItems: TRadioItem;
@@ -37,12 +38,15 @@ export const FilterItemRadio = ({ radioItems, onSelectedItemsChange, clearFilter
       {radioItems.map ((item, index) => (
         <div key={index} className='item__radio_count' onClick={() => choiceRadioItem (index)}>
           <div
-            className={classNames ('item__radio_square',
-              { 'item__radio_square_open': selectedIndices.includes (index) })}>
-          </div>
-          <h5>{item}</h5>
+            className={classNames('item__radio_square', {
+              item__radio_square_open: selectedIndices.includes(index),
+            })}
+          ></div>
+          <Typography as="span" className="item__radio-item">
+            {item}
+          </Typography>
         </div>
       ))}
     </>
-  )
-}
+  );
+};

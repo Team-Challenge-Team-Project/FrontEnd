@@ -1,0 +1,102 @@
+.Typography {
+  font-size: var(--base-text-font-size);
+  letter-spacing: 0.14em;
+  line-height: 36.16px;
+  &.text-h1,
+  &.text-h2 {
+    &.heading {
+      font-family: 'Playfair Display';
+    }
+  }
+
+  &.text-h1 {
+    font-size: var(--h1-size);
+  }
+
+  &.text-h2 {
+    font-size: var(--h2-size);
+    line-height: 47.26px;
+  }
+
+  &.text-h3 {
+    font-size: var(--h3-size);
+    line-height: 40.68px;
+  }
+
+  &.text-bold {
+    font-weight: 600;
+  }
+
+  &.text-medium {
+    font-weight: 500;
+  }
+
+  &.text-regular {
+    font-weight: 400;
+  }
+
+  &.font18 {
+    font-size: 18px;
+  }
+}
+
+/* 
+.Typography.text-bold {
+  font-weight: 600;
+}
+      line-height: 79.1px;
+
+
+.Typography.text-medium {
+  font-weight: 500;
+}
+
+.Typography.text-regular {
+  font-weight: 400;
+} */
+/* 
+.Typography.text-h1-bold {
+  font-size: var(--h1-size);
+  font-weight: 600;
+}
+
+.Typography.text-h2 {
+  font-size: var(--h2-size);
+  line-height: 47.46px;
+  /* &.-bHeading{
+
+  } */
+/* }
+
+.Typography.text-h2 {
+  font-size: var(--h2-size);
+  line-height: 47.46px;
+}
+
+.Typography.text-h3 {
+  font-size: var(--h3-size);
+}
+
+.Typography.text {
+  font-size: var(--base-text-font-size);
+}
+
+.Typography.font-playfair {
+  font-family: 'Playfair Display';
+}
+
+.Typography.font-roboto {
+  font-family: 'Roboto';
+}
+
+.Typography.font16 {
+  font-size: 16px;
+}
+
+.Typography.font18 {
+  font-size: 18px;
+}
+
+.Typography.font21 {
+  font-size: 21px;
+} */

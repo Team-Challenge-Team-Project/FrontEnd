@@ -1,0 +1,35 @@
+.breadcrumb {
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb > * {
+  line-height: 40.68px;
+  letter-spacing: 0.14em;
+}
+
+.breadcrumb ul > li a:visited {
+  color: #000;
+}
+
+.breadcrumb > :not(:last-child) {
+  text-transform: uppercase;
+}
+
+.breadcrumb :not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: '>';
+  margin: 0 26px;
+  /* width: 18px; */
+  /* height: 9px; */
+  /* top: 18px; */
+  /* gap: 0px; */
+  /* border: 1.5px 0px 0px 0px; */
+}

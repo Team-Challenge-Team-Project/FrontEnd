@@ -1,0 +1,13 @@
+.journal__item {
+  /* max-width: 22%; */
+}
+
+.journal__item_img {
+  width: 100%;
+}
+
+.journal__item_text {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 24px 0 0 0;
+}
