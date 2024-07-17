@@ -4,7 +4,7 @@ import { ETypographyVariant, Typography } from 'src/components/ui/typography';
 import Button from 'src/components/ui/button';
 import { OurLooksCarousel } from 'src/components/ourLooksCarousel';
 import { JournalCard } from 'src/components/journalCard';
-import { FilerButton } from '../../components/common/filerButton/filterButton';
+import { FilterButton } from '../../components/common/filterButton/filterButton'
 
 export const Home = () => {
   return (

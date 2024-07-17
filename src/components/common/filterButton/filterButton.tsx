@@ -6,14 +6,14 @@ import { RootState } from '../../../store/store'
 import { useEffect } from 'react'
 
 
-export const FilerButton = () => {
+export const FilterButton = () => {
 
   const dispatch = useAppDispatch ()
   const { openFilter } = filterSlice.actions
   const isOpen = useAppSelector ((state: RootState) => state.filter.isOpen)
 
   useEffect (() => {
-    if (!isOpen) {
+    if (isOpen) {
       document.body.classList.add ('no-scroll')
     } else {
       document.body.classList.remove ('no-scroll')

@@ -1,26 +1,35 @@
-import './filterItem.style.css';
-import { useState } from 'react';
-import classNames from 'classnames';
-import { TFilterData } from '../types';
-import { SvgFinder } from '../../../../Helper';
-import { FilterItemSubTitle } from '../filterItemSubTitle/filterItemSubTitle';
-import { FilterItemRadio } from '../filterItemRadio/filterItemRadio';
-import { FilterItemProgressBar } from '../filterItemProgressBar/filterItemProgressBar';
-import { Typography } from '../../typography';
+import './filterItem.style.css'
+import { useState, useEffect } from 'react'
+import classNames from 'classnames'
+import { TFilterData } from '../types'
+import { SvgFinder } from '../../../../Helper'
+import { FilterItemSubTitle } from '../filterItemSubTitle/filterItemSubTitle'
+import { FilterItemRadio } from '../filterItemRadio/filterItemRadio'
+import { FilterItemProgressBar } from '../filterItemProgressBar/filterItemProgressBar'
 
-export const FilterItem = (props: TFilterData) => {
-  const [detailItemOpen, setDetailItemOpen] = useState(false);
-  const [selectedItems, setSelectedItems] = useState<number[]>(
-    props.selectedItems
-  );
+interface FilterItemProps extends TFilterData {
+  clearFilter: boolean; // Изменено на boolean
+}
+
+export const FilterItem = (props: FilterItemProps) => {
+
+  const [detailItemOpen, setDetailItemOpen] = useState (false)
+  const [selectedItems, setSelectedItems] = useState<number[]> (props.selectedItems)
+
+  useEffect (() => {
+    if (props.clearFilter) {
+      setSelectedItems ([]) // Сброс выбранных элементов
+    }
+  }, [props.clearFilter])
 
   const openDetailsItem = () => {
     setDetailItemOpen(!detailItemOpen);
   };
 
   const handleSelectedItemsChange = (selectedIndices: number[]) => {
-    setSelectedItems(selectedIndices);
+    setSelectedItems (selectedIndices)
   };
+  
   return (
     <div className="filter__item">
       <div
@@ -47,14 +56,12 @@ export const FilterItem = (props: TFilterData) => {
         {props.subTitle ? (
           <FilterItemSubTitle subTitleItems={props.subTitle} />
         ) : props.radioItem ? (
-          <FilterItemRadio
-            radioItems={props.radioItem}
-            onSelectedItemsChange={handleSelectedItemsChange}
-          />
+          <FilterItemRadio radioItems={props.radioItem}
+                           onSelectedItemsChange={handleSelectedItemsChange} clearFilter={props.clearFilter} />
         ) : props.progressBarItem ? (
-          <FilterItemProgressBar progressBarItems={props.progressBarItem} />
+          <FilterItemProgressBar progressBarItems={props.progressBarItem} clearFilter={props.clearFilter} />
         ) : null}
       </div>
     </div>
-  );
-};
+  )
+}

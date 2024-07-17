@@ -1,20 +1,22 @@
 .filter {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: 100;
-}
-
-.filter__close {
     width: 0;
     height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    visibility: hidden;
+}
+
+.filter__open {
+    width: 100vw;
+    height: 100vh;
+    visibility: visible;
 }
 
 .filter__count {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -50vw;
     width: 446px;
     height: 100vh;
     background: #FFFCF4;
@@ -23,13 +25,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    animation: filterOpen 0.5s;
+    animation: filterClose 0.5s;
     overflow-y: scroll;
 }
 
-.filter__count__close {
-    left: -50vw;
-    animation: filterClose 0.5s
+.filter__count__open {
+    left: 0;
+    animation: filterOpen 0.5s;
 }
 
 @keyframes filterOpen {

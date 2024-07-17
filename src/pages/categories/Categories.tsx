@@ -1,13 +1,14 @@
+import './Categories.style.css'
+import { SvgFinder } from '../../Helper'
+import { FilterButton } from '../../components/common/filterButton/filterButton'
 import { ProductCard } from 'src/components/productCard';
 import { categoriesData } from '../../utils/fakeCategoriesData';
-import './Categories.style.css';
 import { Pagination } from 'src/components/ui/pagination';
 import { useParams } from 'react-router-dom';
 import Breadcrumb from 'src/components/ui/breadcrumb';
 import DropDown from 'src/components/ui/dropDown';
 import { useState } from 'react';
 import Checkbox from 'src/components/ui/checkbox';
-import { FilerButton } from 'src/components/common/filerButton/filterButton';
 
 const categoriesSortBy = [
   {
@@ -74,7 +75,7 @@ export const Categories = () => {
           >
             Filters
           </Button> */}
-
+          <FilterButton/>
           <DropDown
             trigger="hover"
             classes={{ dropDown: 'categories__filters-dropdown-sort' }}
