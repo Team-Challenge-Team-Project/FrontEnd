@@ -5,7 +5,7 @@ export interface IAuthState {
 }
 
 const initialState: IAuthState = {
-  isOpen: true
+  isOpen: false
 }
 
 export const filterSlice = createSlice ({

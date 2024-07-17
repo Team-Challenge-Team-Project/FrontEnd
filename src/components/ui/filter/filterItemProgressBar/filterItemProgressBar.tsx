@@ -1,40 +1,62 @@
 import './filterItemProgressBar.style.css'
 import { TProgressBarItem } from '../types'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactSlider from 'react-slider'
 
 interface FilterProgressBarProps {
   progressBarItems: TProgressBarItem;
+  clearFilter: boolean; // Изменено на boolean
 }
 
-export const FilterItemProgressBar = ({ progressBarItems }: FilterProgressBarProps) => {
-  const [startValue, setStartValue] = useState<string> (String (''))
-  const [endValue, setEndValue] = useState<string> (String (''))
+export const FilterItemProgressBar = ({ progressBarItems, clearFilter }: FilterProgressBarProps) => {
+  const [startValue, setStartValue] = useState<number>(0)
+  const [endValue, setEndValue] = useState<number>(10000)
+  const [tempStartValue, setTempStartValue] = useState<string>(startValue.toString())
+  const [tempEndValue, setTempEndValue] = useState<string>(endValue.toString())
 
-
-  const handleNumericInputLeft = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    if (/^\d*$/.test (value)) {
-      setStartValue (value)
+  useEffect(() => {
+    if (clearFilter) {
+      setStartValue(0); // Сброс значений
+      setEndValue(10000); // Сброс значений
+      setTempStartValue('0');
+      setTempEndValue('10000');
     }
-    const exampleThumbLeft = document.querySelector ('.example-thumb-0') as HTMLElement
-    console.log (exampleThumbLeft.style.left)
-    console.log (value)
-    exampleThumbLeft.style.left = `${100}px`
+  }, [clearFilter]);
+
+  const handleStartValueKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      const value = Number((e.target as HTMLInputElement).value)
+      if (!isNaN(value) && value <= 8700) {
+        setStartValue(value)
+      }
+      if (!isNaN(value) && value > endValue - 1300) {
+        setTempStartValue(String(endValue - 1300))
+        setStartValue(endValue - 1300)
+      }
+    }
   }
 
-  const handleNumericInputRight = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    if (/^\d*$/.test (value)) {
-      setEndValue (value)
+  const handleEndValueKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      const value = Number((e.target as HTMLInputElement).value)
+      if (!isNaN(value) && value >= 1300) {
+        setEndValue(value)
+      }
+      if (!isNaN(value) && value < startValue + 1300) {
+        setTempEndValue(String(startValue + 1300))
+        setEndValue(startValue + 1300)
+      }
     }
-    const exampleThumbRight = document.querySelector ('.example-thumb-1')as HTMLElement
-    console.log (exampleThumbRight?.style.left)
   }
 
-  const changeSlider = ({ value }: { value: number[], index: number }) => {
-    setStartValue (String (value[0] * 100))
-    setEndValue (String (value[1] * 100))
+  const changeSlider = (value: number[]) => {
+    const [start, end] = value.map(v => v * 100)
+    if (start <= 8700 && end >= 1300) {
+      setStartValue(start)
+      setEndValue(end)
+      setTempStartValue(start.toString())
+      setTempEndValue(end.toString())
+    }
   }
 
   return (
@@ -44,8 +66,9 @@ export const FilterItemProgressBar = ({ progressBarItems }: FilterProgressBarPro
           type='text'
           className='progress-bar__input progress-bar__input_min'
           placeholder={`${progressBarItems.currencies[0]} ${progressBarItems.start}`}
-          value={startValue}
-          onChange={(e) => handleNumericInputLeft (e)}
+          value={tempStartValue}
+          onChange={(e) => setTempStartValue(e.target.value)}
+          onKeyDown={handleStartValueKeyDown}
           inputMode='numeric'
         />
         <div className='progress-bar__window_pass'>-</div>
@@ -53,8 +76,9 @@ export const FilterItemProgressBar = ({ progressBarItems }: FilterProgressBarPro
           type='text'
           className='progress-bar__input progress-bar__input_max'
           placeholder={`${progressBarItems.currencies[0]} ${progressBarItems.end}`}
-          value={endValue}
-          onChange={(e) => handleNumericInputRight (e)}
+          value={tempEndValue}
+          onChange={(e) => setTempEndValue(e.target.value)}
+          onKeyDown={handleEndValueKeyDown}
           inputMode='numeric'
         />
       </div>
@@ -62,15 +86,12 @@ export const FilterItemProgressBar = ({ progressBarItems }: FilterProgressBarPro
         className='horizontal-slider'
         thumbClassName='example-thumb'
         trackClassName='example-track'
-        defaultValue={[0, 10000]}
+        value={[startValue / 100, endValue / 100]}
         ariaLabel={['Lower thumb', 'Upper thumb']}
-        ariaValuetext={state => `Thumb value ${state.valueNow}`}
-        // renderThumb={(props, state) => <div {...props}>{state.valueNow}</div>}
+        ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
         pearling
         minDistance={13}
-        onChange={(value, index) => {
-          changeSlider ({ value, index })
-        }}
+        onChange={(value) => changeSlider(value)}
       />
     </div>
   )

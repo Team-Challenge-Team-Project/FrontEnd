@@ -4,10 +4,9 @@ import { Pagination } from '../../components/common/pagination/pagination'
 import ProductCard from '../../components/productCard/productCard'
 import { categoriesData } from '../../utils/fakeCategoriesData'
 import './Categories.style.css'
-import { FilerButton } from '../../components/common/filerButton/filterButton'
+import { FilterButton } from '../../components/common/filterButton/filterButton'
 
 export const Categories = () => {
-
 
   return (
     <main className='categories'>
@@ -15,7 +14,7 @@ export const Categories = () => {
 
       <div className='categories__filters'>
         <div className='categories__row'>
-          <FilerButton/>
+          <FilterButton/>
             <button className='categories__filters-button-sort'>
               Sort by
               <SvgFinder src='arrow-bottom.svg' />

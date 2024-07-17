@@ -2,7 +2,7 @@ import './Home.styled.css'
 import ProductCard from '../../components/productCard/productCard'
 import JournalCard from '../../components/jornalCard/journalCard'
 import { ImageFinder, SvgFinder } from '../../Helper'
-import { FilerButton } from '../../components/common/filerButton/filterButton'
+import { FilterButton } from '../../components/common/filterButton/filterButton'
 
 
 export const Home = () => {
@@ -19,7 +19,7 @@ export const Home = () => {
     <section className='new-in'>
       <h3 className='new-in__title'>New In</h3>
       <div className='filter__buttons_count'>
-        <FilerButton/>
+        <FilterButton/>
         <button className='filter__button'>Women</button>
         <button className='filter__button'>Men</button>
       </div>
