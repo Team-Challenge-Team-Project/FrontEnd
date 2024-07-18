@@ -1,4 +1,4 @@
-import './header.style.css';
+import './header.styled.css';
 import { SvgFinder } from '../../../Helper';
 import { Link } from 'react-router-dom';
 import DropDown from '../../ui/dropDown';
