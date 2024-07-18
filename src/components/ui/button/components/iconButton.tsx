@@ -23,7 +23,7 @@ export const IconButton: FC<TIconButtonProps> = ({
       classes={{ button: clsx('button-icon', className) }}
       isActive={isActive}
       isDisabled={isDisabled}
-      onClick={onClick}
+      onClick={onClick as never}
     >
       <Icon type={icon} />
     </Button>

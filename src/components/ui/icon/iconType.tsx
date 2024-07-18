@@ -7,7 +7,9 @@ export type IconType =
   | 'Heart'
   | 'FilterDown'
   | 'RightCircleArrow'
-  | 'LeftCircleArrow';
+  | 'LeftCircleArrow'
+  | 'Login'
+  | 'ViewHide';
 
 export const iconTypes = new Map([
   [
@@ -42,5 +44,10 @@ export const iconTypes = new Map([
       src="left-circle-arrow.svg"
       alt="left-right-circle-arrow"
     />,
+  ],
+  ['Login', <SvgFinder key="login" src="login.svg" alt="login" />],
+  [
+    'ViewHide',
+    <SvgFinder key="view-hide" src="view-hide.svg" alt="view-hide" />,
   ],
 ]);

@@ -144,6 +144,11 @@
   flex: 0 0 315px;
 }
 
+.products__count > *:hover {
+  transform: scale(1.1);
+  transition: all 300ms ease;
+}
+
 .new-products__button {
   display: inline-flex;
   align-items: center;

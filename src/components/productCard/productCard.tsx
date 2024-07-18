@@ -3,6 +3,7 @@ import { ImageFinder } from '../../Helper';
 import Icon from '../ui/icon';
 import { Card, TCardProps } from '../ui/card';
 import { ETypographyVariant, Typography } from '../ui/typography';
+import { Link } from 'react-router-dom';
 
 type TProps = TCardProps & {
   src?: string;
@@ -28,24 +29,29 @@ export const ProductCard = ({
             <Icon type="Heart" className="product__head-like_svg" />
           </div>
           <div className="product__head-img">
-            <ImageFinder
-              src={src}
-              className="product__head-img_image"
-              alt="product"
-            />
+            <Link to="/product">
+              <ImageFinder
+                src={src}
+                className="product__head-img_image"
+                alt="product"
+              />
+            </Link>
           </div>
         </>
       }
       bodyClassName="product__body"
       body={
         <>
-          <Typography
-            as="h3"
-            className="product__brand"
-            variant={ETypographyVariant.TextS18Medium}
-          >
-            {title}
-          </Typography>
+          <Link to="/product">
+            {' '}
+            <Typography
+              as="h3"
+              className="product__brand"
+              variant={ETypographyVariant.TextS18Medium}
+            >
+              {title}
+            </Typography>
+          </Link>
           <Typography as="p" className="product__info">
             {description}
           </Typography>
