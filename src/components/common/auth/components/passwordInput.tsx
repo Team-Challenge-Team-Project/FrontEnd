@@ -8,6 +8,7 @@ export const PasswordInput: FC = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
   return (
     <>
       <label className="auth__form-label" htmlFor="password">
@@ -22,7 +23,7 @@ export const PasswordInput: FC = () => {
               {...field}
             />
             <Button.Icon
-              icon="ViewHide"
+              icon={showPassword ? 'View' : 'ViewHide'}
               className="auth__form-field-icon"
               onClick={togglePasswordVisibility}
             />
