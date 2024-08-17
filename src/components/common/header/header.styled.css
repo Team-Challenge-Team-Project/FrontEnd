@@ -18,6 +18,7 @@
   font-weight: 400;
   letter-spacing: 0.14em;
   line-height: 226%;
+  position: relative;
 }
 
 .nav__list-item_button {
@@ -73,8 +74,13 @@
   width: 37px;
   height: 37px;
   position: relative;
-  padding: 10px;
+  padding: 0;
   cursor: pointer;
+  border: none;
+}
+
+.links__button:hover {
+  box-shadow: none;
 }
 
 .links__button_img {

@@ -7,36 +7,36 @@ import { Typography } from '../../typography';
 interface FilterItemRadioProps {
   radioItems: TRadioItem;
   onSelectedItemsChange: (selectedIndices: number[]) => void;
+  clearFilter: boolean; // Изменено на boolean
 }
 
-export const FilterItemRadio = ({
-  radioItems,
-  onSelectedItemsChange,
-}: FilterItemRadioProps) => {
-  const [selectedIndices, setSelectedIndices] = useState<number[]>([]);
+export const FilterItemRadio = ({ radioItems, onSelectedItemsChange, clearFilter }: FilterItemRadioProps) => {
+  const [selectedIndices, setSelectedIndices] = useState<number[]> ([])
 
-  useEffect(() => {
-    onSelectedItemsChange(selectedIndices);
-  }, [selectedIndices, onSelectedItemsChange]);
+  useEffect (() => {
+    onSelectedItemsChange (selectedIndices)
+  }, [selectedIndices, onSelectedItemsChange])
+
+  useEffect (() => {
+    if (clearFilter) {
+      setSelectedIndices ([]) // Сброс выбранных индексов
+    }
+  }, [clearFilter])
 
   const choiceRadioItem = (index: number) => {
-    setSelectedIndices((prevSelected) => {
-      if (prevSelected.includes(index)) {
-        return prevSelected.filter((i) => i !== index);
+    setSelectedIndices (prevSelected => {
+      if (prevSelected.includes (index)) {
+        return prevSelected.filter (i => i !== index)
       } else {
-        return [...prevSelected, index];
+        return [...prevSelected, index]
       }
-    });
-  };
+    })
+  }
 
   return (
     <>
-      {radioItems.map((item, index) => (
-        <div
-          key={index}
-          className="item__radio_count"
-          onClick={() => choiceRadioItem(index)}
-        >
+      {radioItems.map ((item, index) => (
+        <div key={index} className='item__radio_count' onClick={() => choiceRadioItem (index)}>
           <div
             className={classNames('item__radio_square', {
               item__radio_square_open: selectedIndices.includes(index),

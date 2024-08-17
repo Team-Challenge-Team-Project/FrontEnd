@@ -23,7 +23,7 @@ const Button: FC<IButtonProps> = ({
 }) => {
   return (
     <button
-      data-value={children}
+      // data-value={children}
       className={classes?.button}
       disabled={isDisabled}
       onClick={onClick}

@@ -4,7 +4,7 @@ import { ETypographyVariant, Typography } from 'src/components/ui/typography';
 import Button from 'src/components/ui/button';
 import { OurLooksCarousel } from 'src/components/ourLooksCarousel';
 import { JournalCard } from 'src/components/journalCard';
-import { FilerButton } from '../../components/common/filerButton/filterButton';
+import { FilterButton } from '../../components/common/filterButton/filterButton'
 
 export const Home = () => {
   return (
@@ -31,7 +31,7 @@ export const Home = () => {
         </Typography>
 
         <div className="filter__buttons_count">
-          <FilerButton />
+          <FilterButton />
           <Button classes={{ button: 'filter__button' }}>Women</Button>
           <Button classes={{ button: 'filter__button' }}>Men</Button>
         </div>
