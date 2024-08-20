@@ -1,0 +1,55 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__empty {
+  position: fixed;
+}
+
+.cart__p {
+  margin-bottom: 40px;
+}
+
+.cart__empty-container__img {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cart__empty-img {
+  background-image: url(../../../assets/img/newin2.jpeg);
+  position: absolute;
+  top: 40px;
+  right: 0;
+  left: -40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.cart__empty-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 36.16px;
+}
+
+.cart__empty-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.cart__empty-link:hover::after {
+  width: 100%;
+}
