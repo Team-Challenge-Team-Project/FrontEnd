@@ -1,11 +1,10 @@
-import { memo } from 'react';
-import type { FC } from 'react';
-import { TTypographyProps } from './types';
+import { FC } from 'react';
 import clsx from 'clsx';
+import { TTypographyProps } from './types';
 import { TYPOGRAPHY_VARIANTS } from './constants';
 import { ETypographyVariant } from './enums';
 
-const TypographyComponent: FC<TTypographyProps> = ({
+const Typography: FC<TTypographyProps> = ({
   as = 'span',
   children,
   className,
@@ -17,14 +16,13 @@ const TypographyComponent: FC<TTypographyProps> = ({
   ...rest
 }) => {
   const currentVariant = TYPOGRAPHY_VARIANTS()[variant];
-  const Tag = `${as}` as keyof JSX.IntrinsicElements;
+  const Tag = as as keyof JSX.IntrinsicElements;
 
   const props: Record<string, unknown> = {
     className: clsx(className, currentVariant, {
       [`text-${color}`]: color,
       [`text-${weight}`]: weight,
-      [`text-${as}`]: as,
-      [`font-${size}`]: size,
+      [`text-${size}`]: size,
     }),
     ...rest,
   };
@@ -36,4 +34,4 @@ const TypographyComponent: FC<TTypographyProps> = ({
   return <Tag {...props}>{children}</Tag>;
 };
 
-export const Typography = memo(TypographyComponent);
+export default Typography;

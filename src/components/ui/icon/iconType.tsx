@@ -10,7 +10,9 @@ export type IconType =
   | 'LeftCircleArrow'
   | 'Login'
   | 'ViewHide'
-  | 'View';
+  | 'View'
+  | 'Bag'
+  | 'Close';
 
 export const iconTypes = new Map([
   [
@@ -52,4 +54,6 @@ export const iconTypes = new Map([
     <SvgFinder key="view-hide" src="view-hide.svg" alt="view-hide" />,
   ],
   ['View', <SvgFinder key="view" src="view.svg" alt="view" />],
+  ['Bag', <SvgFinder key="bag" src="bag.svg" alt="bag" />],
+  ['Close', <SvgFinder key="close" src="close.svg" alt="close" />],
 ]);

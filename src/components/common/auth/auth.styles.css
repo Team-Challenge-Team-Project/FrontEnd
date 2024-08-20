@@ -18,7 +18,7 @@
 .auth {
   display: flex;
   flex-direction: row;
-  height: 872px;
+  /* height: 872px; */
 }
 
 .auth__header {
@@ -117,7 +117,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 56px;
+  padding: 54px 56px;
   justify-content: center;
   height: 100%;
 }
@@ -135,3 +135,17 @@
 }
 
 /* signup */
+
+@media (max-width: 425px) {
+  .auth__img {
+    display: none;
+  }
+  .login,
+  .signup {
+    padding: 30px 20px;
+  }
+
+  .rc-dialog {
+    width: 94% !important;
+  }
+}

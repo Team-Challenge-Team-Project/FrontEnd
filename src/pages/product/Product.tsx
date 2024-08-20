@@ -1,7 +1,7 @@
 import './Product.style.css';
 import { ImageFinder, SvgFinder } from '../../Helper';
 import { ProductCard } from 'src/components/productCard';
-import { ETypographyVariant, Typography } from 'src/components/ui/typography';
+import Typography, { ETypographyVariant } from 'src/components/ui/typography';
 
 export const Product = () => {
   return (

@@ -1,7 +1,7 @@
 import './journalCard.style.css';
 import journalImg from '../../assets/img/journal1.png';
 import { Card } from '../ui/card';
-import { Typography } from '../ui/typography';
+import Typography from 'src/components/ui/typography';
 
 export const JournalCard = () => {
   return (

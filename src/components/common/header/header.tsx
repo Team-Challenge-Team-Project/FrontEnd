@@ -3,11 +3,22 @@ import { SvgFinder } from '../../../Helper';
 import { Link } from 'react-router-dom';
 import DropDown from '../../ui/dropDown';
 import { menuItems } from 'src/utils/headerData';
-import { ETypographyVariant, Typography } from 'src/components/ui/typography';
+import Typography, { ETypographyVariant } from 'src/components/ui/typography';
 import clsx from 'clsx';
 import Auth from '../auth/auth';
+import { useDispatch } from 'react-redux';
+import { toggleCart } from 'src/store/features/cartSlice';
+import Button from 'src/components/ui/button';
+import { BurgerMenu } from 'src/components/common/burgerMenu';
+import { HeaderLinks } from './headerLinks';
 
 export const Header = () => {
+  // const dispatch = useDispatch();
+
+  // const handleCartClick = () => {
+  //   dispatch(toggleCart());
+  // };
+
   return (
     <header className="header">
       <nav className="nav-bar__count">
@@ -52,44 +63,16 @@ export const Header = () => {
         </ul>
       </nav>
 
-      <Typography as="h1" variant={ETypographyVariant.H1MediumHeading}>
+      <Typography
+        as="h1"
+        variant={ETypographyVariant.H1MediumHeading}
+        className="header-wearhouse"
+      >
         <Link to="/">WEARHOUSE</Link>
       </Typography>
 
-      <div className="links__count">
-        <div className="links__button">
-          <SvgFinder
-            src="search.svg"
-            className="links__button_img"
-            alt="search"
-          />
-        </div>
-        <div className="links__button">
-          <SvgFinder
-            src="heart.svg"
-            className="links__button_img"
-            alt="heart"
-          />
-        </div>
-        <div className="links__button">
-          <SvgFinder
-            src="earth.svg"
-            className="links__button_img"
-            alt="earth"
-          />
-        </div>
-        <Auth />
-        {/* <div className="links__button">
-          <SvgFinder
-            src="login.svg"
-            className="links__button_img"
-            alt="login"
-          />
-        </div> */}
-        <div className="links__button">
-          <SvgFinder src="bag.svg" className="links__button_img" alt="bag" />
-        </div>
-      </div>
+      <HeaderLinks className="links__count" />
+      <BurgerMenu />
     </header>
   );
 };

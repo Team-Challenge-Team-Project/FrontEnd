@@ -6,3 +6,15 @@
   padding: 0 60px;
   /* max-width: 1440px; */
 }
+
+@media (max-width: 425px) {
+  .app {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .app {
+    padding: 0 20px;
+  }
+}

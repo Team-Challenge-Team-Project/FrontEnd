@@ -1,0 +1,37 @@
+.tabs {
+  width: 100%;
+}
+
+.tabs__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs__tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  background-color: #7f7e7a47;
+  border-radius: 0;
+  width: 100%;
+}
+
+.tabs__tab.active {
+  color: #000;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.tabs__tab:hover {
+  background-color: transparent;
+}
+
+.tabs__panel {
+  padding: 20px;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+}

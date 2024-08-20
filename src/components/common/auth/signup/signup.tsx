@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from 'formik';
 import Button from 'src/components/ui/button';
 import { Divider } from 'src/components/ui/divider';
-import { Typography } from 'src/components/ui/typography';
+import Typography, { ETypographyVariant } from 'src/components/ui/typography';
 import { TActiveAuth, TFormValues } from '../types';
 import { EmailInput, FormCheckbox, PasswordInput } from '../components';
 
@@ -20,7 +20,11 @@ export const Signup = ({ onSubmit, onChangeAuth }: TSignupProps) => {
 
   return (
     <section className="signup">
-      <Typography as="h2" className="auth__header">
+      <Typography
+        as="h2"
+        variant={ETypographyVariant.H2Regular}
+        className="auth__header"
+      >
         CREATE AN ACCOUNT
       </Typography>
 

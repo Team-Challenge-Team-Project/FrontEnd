@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { TBreadcrumbItems } from './types';
-import { ETypographyVariant, Typography } from '../typography';
+import Typography, { ETypographyVariant } from '../typography';
 
 export default function BreadcrumbItem({
   link,

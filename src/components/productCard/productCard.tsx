@@ -2,7 +2,7 @@ import './productCard.style.css';
 import { ImageFinder } from '../../Helper';
 import Icon from '../ui/icon';
 import { Card, TCardProps } from '../ui/card';
-import { ETypographyVariant, Typography } from '../ui/typography';
+import Typography, { ETypographyVariant } from '../ui/typography';
 import { Link } from 'react-router-dom';
 
 type TProps = TCardProps & {

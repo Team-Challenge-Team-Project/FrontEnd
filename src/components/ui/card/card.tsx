@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import './card.style.css';
+import './card.styled.css';
 import { ECardSize } from './enums';
 import { TCardProps } from './types';
 

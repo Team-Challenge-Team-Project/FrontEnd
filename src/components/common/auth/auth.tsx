@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Button from 'src/components/ui/button';
 import Modal from 'src/components/ui/modal/modal';
 import './auth.styles.css';
-// import { ETypographyVariant, Typography } from 'src/components/ui/typography';
 import { TActiveAuth } from './types';
 import { Login } from './login';
 import { Signup } from './signup';

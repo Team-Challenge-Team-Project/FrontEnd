@@ -14,7 +14,7 @@ export const TYPOGRAPHY_VARIANTS = () => {
     ),
 
     // h2
-    [ETypographyVariant.H2Bold]: clsx('Typography text-bold'),
+    [ETypographyVariant.H2Bold]: clsx('Typography text-h2 text-bold'),
     [ETypographyVariant.H2Medium]: clsx('Typography text-h2 text-medium'),
     [ETypographyVariant.H2Regular]: clsx('Typography text-h2 text-regular'),
     [ETypographyVariant.H2BoldHeading]: clsx(

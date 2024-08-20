@@ -2,7 +2,7 @@ import './filterItemSubTitle.style.css';
 import { TSubTitle } from '../types';
 import classNames from 'classnames';
 import { useState } from 'react';
-import { Typography } from '../../typography';
+import Typography from 'src/components/ui/typography';
 
 interface FilterItemSubTitleProps {
   subTitleItems: TSubTitle[];

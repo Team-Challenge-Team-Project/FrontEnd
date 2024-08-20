@@ -102,3 +102,50 @@
 .links__button:hover::before {
   width: 100%;
 }
+
+/* src/components/common/Header/header.styled.css */
+/* 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-bar__count {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__list-item {
+  margin-right: 20px;
+}
+
+.links__count {
+  display: flex;
+  align-items: center;
+} */
+
+/* Media Query for Mobile View */
+@media (max-width: 992px) {
+  .nav-bar__count {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .links__count {
+    display: none;
+  }
+}
