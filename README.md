@@ -16,6 +16,12 @@ Post management system for Team-Challenge
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
 
+## Deployment Instructions
+
+To deploy app to GitHub Pages, follow these steps:
+run 
+1. npm run predeploy
+2. npm run deploy
 
 Table of contents
 -----------------
