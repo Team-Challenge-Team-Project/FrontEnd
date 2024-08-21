@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import { TDropDownButtonProps } from '../types';
 import { EDropDownButtonTrigger } from '../enums';
 import Icon from '../../icon';
-import { type } from '../../../ourLooksCarousel/components/types';
 
 const DropDownButton: FC<TDropDownButtonProps> = ({
   children,

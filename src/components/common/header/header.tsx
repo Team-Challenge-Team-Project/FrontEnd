@@ -1,14 +1,9 @@
 import './header.styled.css';
-import { SvgFinder } from '../../../Helper';
 import { Link } from 'react-router-dom';
 import DropDown from '../../ui/dropDown';
 import { menuItems } from 'src/utils/headerData';
 import Typography, { ETypographyVariant } from 'src/components/ui/typography';
 import clsx from 'clsx';
-import Auth from '../auth/auth';
-import { useDispatch } from 'react-redux';
-import { toggleCart } from 'src/store/features/cartSlice';
-import Button from 'src/components/ui/button';
 import { BurgerMenu } from 'src/components/common/burgerMenu';
 import { HeaderLinks } from './headerLinks';
 

@@ -7,9 +7,9 @@ import { FilterItemSubTitle } from '../filterItemSubTitle/filterItemSubTitle';
 import { FilterItemRadio } from '../filterItemRadio/filterItemRadio';
 import { FilterItemProgressBar } from '../filterItemProgressBar/filterItemProgressBar';
 
-interface FilterItemProps extends TFilterData {
+type FilterItemProps = {
   clearFilter: boolean; // Изменено на boolean
-}
+} & TFilterData;
 
 export const FilterItem = (props: FilterItemProps) => {
   const [detailItemOpen, setDetailItemOpen] = useState(false);

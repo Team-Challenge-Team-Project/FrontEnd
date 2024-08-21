@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export interface IAuthState {
+export type IAuthState = {
   isOpen: boolean;
-}
+};
 
 const initialState: IAuthState = {
   isOpen: false,

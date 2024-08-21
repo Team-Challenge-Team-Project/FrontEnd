@@ -3,14 +3,14 @@ import './drawer.styled.css';
 import Button from '../button';
 import clsx from 'clsx';
 
-interface DrawerProps {
+type DrawerProps = {
   isOpen: boolean;
   onClose: () => void;
   position?: 'right' | 'left' | 'top' | 'bottom';
   children: React.ReactNode;
   className?: string;
   closeIcon?: boolean;
-}
+};
 
 export const Drawer: React.FC<DrawerProps> = ({
   isOpen,

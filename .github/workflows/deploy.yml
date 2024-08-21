@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-configuration # or your default branch
+      - dev # or your default branch
 
 jobs:
   deploy:
@@ -14,6 +14,7 @@ jobs:
 
     env:
       CI: false # Disable treating warnings as errors
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3

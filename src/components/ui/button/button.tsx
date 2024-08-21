@@ -2,7 +2,7 @@ import { DOMAttributes, FC, MouseEvent, ReactNode } from 'react';
 import { TButton, TClasses } from './types';
 import Icon, { IconType } from '../icon';
 
-export interface IButtonProps extends DOMAttributes<HTMLButtonElement> {
+export type IButtonProps = {
   isActive?: boolean;
   isDisabled?: boolean;
   onClick?: (event?: MouseEvent<HTMLButtonElement>) => void;
@@ -10,7 +10,7 @@ export interface IButtonProps extends DOMAttributes<HTMLButtonElement> {
   icon?: IconType;
   classes?: TClasses;
   type?: TButton;
-}
+} & DOMAttributes<HTMLButtonElement>;
 
 const Button: FC<IButtonProps> = ({
   icon,

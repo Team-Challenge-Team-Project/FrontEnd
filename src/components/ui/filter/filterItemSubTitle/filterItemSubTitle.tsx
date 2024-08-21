@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import { useState } from 'react';
 import Typography from 'src/components/ui/typography';
 
-interface FilterItemSubTitleProps {
+type FilterItemSubTitleProps = {
   subTitleItems: TSubTitle[];
-}
+};
 
 export const FilterItemSubTitle = ({
   subTitleItems,

@@ -3,12 +3,12 @@ import './collapse.styled.css';
 import Icon from '../icon';
 import clsx from 'clsx';
 
-interface CollapseProps {
+type CollapseProps = {
   title: string;
   children: React.ReactNode;
   defaultOpen?: boolean;
   className?: string;
-}
+};
 
 export const Collapse: React.FC<CollapseProps> = ({
   title,

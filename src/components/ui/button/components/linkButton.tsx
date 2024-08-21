@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import { FC, ReactNode } from 'react';
 import Icon, { IconType } from '../../icon';
-import Button from '..';
 import { Link } from 'react-router-dom';
 
 export type TIconButtonProps = {

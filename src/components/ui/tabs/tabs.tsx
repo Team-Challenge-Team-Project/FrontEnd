@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  ReactNode,
-  ReactElement,
-  Children,
-  cloneElement,
-} from 'react';
+import React, { useState, ReactNode, ReactElement, Children } from 'react';
 import './tabs.styled.css';
 import Button from '../button';
 

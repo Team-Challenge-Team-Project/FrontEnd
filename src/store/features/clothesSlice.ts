@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import clothesService from 'src/services/clothes.service';
-import { ClothesByFilters, ClothingItem } from 'src/services/types';
+import { ClothingItem } from 'src/services/types';
 
-export interface IAuthState {
+export type TClothesState = {
   clothesData: ClothingItem[];
   categoriesData: ClothingItem[];
-}
+};
 
-const initialState: IAuthState = {
+const initialState: TClothesState = {
   clothesData: [],
   categoriesData: [],
 };

@@ -3,14 +3,20 @@ import { publicRoutes } from './routes';
 import { Root } from '../components/ui/Root';
 
 export default function AppRouter() {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        id: 'root',
+        path: '/',
+        element: <Root />,
+        children: publicRoutes,
+        errorElement: <h1>Error 404 page</h1>,
+      },
+    ],
     {
-      id: 'root',
-      path: '/FrontEnd',
-      element: <Root />,
-      children: publicRoutes,
-      errorElement: <h1>Error 404 page</h1>,
-    },
-  ]);
+      basename: '/FrontEnd', // This is important for GitHub Pages
+    }
+  );
+
   return <RouterProvider router={router} />;
 }

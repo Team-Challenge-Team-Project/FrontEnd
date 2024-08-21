@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import Typography from 'src/components/ui/typography';
 
-interface FilterItemRadioProps {
+type FilterItemRadioProps = {
   radioItems: TRadioItem;
   onSelectedItemsChange: (selectedIndices: number[]) => void;
   clearFilter: boolean; // Изменено на boolean
-}
+};
 
 export const FilterItemRadio = ({
   radioItems,

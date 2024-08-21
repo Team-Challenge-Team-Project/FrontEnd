@@ -1,10 +1,10 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { CartItem } from 'src/types/cart';
 
-export interface CartState {
+export type CartState = {
   items: CartItem[];
   isOpen: boolean;
-}
+};
 
 const initialState: CartState = {
   items: [],
