@@ -28,8 +28,8 @@ export const TYPOGRAPHY_VARIANTS = () => {
     ),
 
     //h3
-    [ETypographyVariant.H3Medium]: clsx('Typography text-medium'),
-    [ETypographyVariant.H3Regular]: clsx('Typography text-regular'),
+    [ETypographyVariant.H3Medium]: clsx('Typography text-h3 text-medium'),
+    [ETypographyVariant.H3Regular]: clsx('Typography text-h3 text-regular'),
 
     // text
     [ETypographyVariant.TextRegular]: clsx('Typography text-regular'),

@@ -25,9 +25,7 @@ export const HeaderLinks = ({
           alt="search"
         />
       </div>
-      <div className="links__button">
-        <SvgFinder src="heart.svg" className="links__button_img" alt="heart" />
-      </div>
+      <Button.Link to="/favorites" icon="Heart" className="links__button" />
       <div className="links__button">
         <SvgFinder src="earth.svg" className="links__button_img" alt="earth" />
       </div>
