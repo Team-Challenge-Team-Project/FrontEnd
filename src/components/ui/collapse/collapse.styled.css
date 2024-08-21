@@ -1,0 +1,49 @@
+.collapse {
+  border-radius: 4px;
+  /* margin: 10px 0; */
+  overflow: hidden;
+}
+
+.collapse__header {
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  padding: 0 0 8px 0;
+  height: fit-content;
+}
+
+.collapse__header:hover {
+  box-shadow: none;
+  color: #565656;
+}
+
+.collapse__icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.collapse__icon .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.collapse__icon.open {
+  transform: rotate(180deg);
+}
+
+.collapse__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.collapse__content.open {
+  max-height: 500px;
+  margin: 24px 0 0 0;
+}

@@ -53,3 +53,9 @@
 .cart__empty-link:hover::after {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .cart__empty-link::after {
+    width: 80%;
+  }
+}

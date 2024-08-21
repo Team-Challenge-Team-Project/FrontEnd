@@ -100,9 +100,9 @@
   }
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .burger-menu .tabs__panel {
     overflow-y: auto;
     height: calc(100vh - 150px);
   }
-}
+} */

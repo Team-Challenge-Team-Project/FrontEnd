@@ -2,16 +2,19 @@ import './Product.style.css';
 import { ImageFinder, SvgFinder } from '../../Helper';
 import { ProductCard } from 'src/components/productCard';
 import Typography, { ETypographyVariant } from 'src/components/ui/typography';
+import { Collapse } from 'src/components/ui/collapse';
 
 export const Product = () => {
   return (
     <div className="product">
       <section className="main__product">
-        <ImageFinder
-          src="Rectangle 634 (1).png"
-          alt="img"
-          className="main__product_img"
-        />
+        <div className="main__product-img">
+          <ImageFinder
+            src="Rectangle 634 (1).png"
+            alt="img"
+            className="main__product-image"
+          />
+        </div>
         <div className="main__product_info">
           <div className="product__brand_count">
             <Typography
@@ -48,7 +51,9 @@ export const Product = () => {
             <button className="product__size_button">XL</button>
             <button className="product__size_button">XLL</button>
           </div>
-          <button className="product__only-one">Only one left</button>
+          <button className="product__only-one" disabled>
+            Only one left
+          </button>
           <button className="product__add">Add to Cart</button>
           <button className="product__buy">Buy Now</button>
         </div>
@@ -61,30 +66,19 @@ export const Product = () => {
           <ImageFinder src="shirt2.png" alt="img" className="details__img" />
         </div>
         <div className="product__description">
-          <div className="product__details">
-            <div className="product__details_title">
-              <Typography as="h3">Details</Typography>
-              <SvgFinder
-                src="arrow-bottom.svg"
-                className="product__details_arrow"
-                alt="svg"
-              />
-            </div>
+          <Collapse title="Details" className="product__details" defaultOpen>
             <p>
               Creamy beige, classic collar design, long sleeves, shimmering
               silver-tone buttons, chest flap pockets, side slit pockets, neat
               hemline, buttoned cuffs
             </p>
-          </div>
-          <div className="product__details">
-            <div className="product__details_title">
-              <Typography as="h3">Materials and Fit</Typography>
-              <SvgFinder
-                src="arrow-bottom.svg"
-                className="product__details_arrow"
-                alt="svg"
-              />
-            </div>
+          </Collapse>
+
+          <Collapse
+            title="Materials and Fit"
+            className="product__details"
+            defaultOpen
+          >
             <div className="product__material_count">
               <div className="product__material_point"></div>
               <p className="product__material">Cotton 100%</p>
@@ -107,8 +101,20 @@ export const Product = () => {
                 This garment prioritizes resilience over stretching
               </p>
             </div>
-          </div>
-          <div className="product__details">
+          </Collapse>
+
+          <Collapse
+            title="Lorem Ipsum"
+            className="product__details"
+            defaultOpen
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              facilisis sit amet ipsum ac tincidunt. Orci varius natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.{' '}
+            </p>
+          </Collapse>
+          {/* <div className="product__details">
             <div className="product__details_title">
               <h3>Lorem Ipsum</h3>
               <SvgFinder
@@ -122,7 +128,7 @@ export const Product = () => {
               facilisis sit amet ipsum ac tincidunt. Orci varius natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.{' '}
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="product__complete">
