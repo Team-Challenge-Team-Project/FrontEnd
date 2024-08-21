@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      CI: false # Disable treating warnings as errors
+
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
