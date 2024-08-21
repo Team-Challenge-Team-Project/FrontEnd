@@ -8,8 +8,8 @@ export default function AppRouter() {
       id: 'root',
       path: '/',
       element: <Root />,
-      errorElement: <h1>Error 404 page</h1>,
       children: publicRoutes,
+      errorElement: <h1>Error 404 page</h1>,
     },
   ]);
   return <RouterProvider router={router} />;
