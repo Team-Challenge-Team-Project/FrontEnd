@@ -6,7 +6,7 @@ export default function AppRouter() {
   const router = createBrowserRouter([
     {
       id: 'root',
-      path: '/',
+      path: '/FrontEnd',
       element: <Root />,
       children: publicRoutes,
       errorElement: <h1>Error 404 page</h1>,
