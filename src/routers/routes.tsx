@@ -2,10 +2,13 @@ import { Favorites } from 'src/pages/favorites/Favorites';
 import { Categories } from '../pages/categories/Categories';
 import { Home } from '../pages/home/Home';
 import { Product } from '../pages/product/Product';
+import { Journal } from 'src/pages/journal/Journal';
+
 import {
   CATEGORIES_PAGE_ROUTE,
   FAVORITES_PAGE_ROUTE,
   HOME_PAGE_ROUTE,
+  JOURNAL_PAGE_ROUTE,
   PRODUCT_PAGE_ROUTE,
 } from '../utils/routeConstants';
 
@@ -21,6 +24,10 @@ export const publicRoutes = [
   {
     path: FAVORITES_PAGE_ROUTE,
     Component: Favorites,
+  },
+  {
+    path: JOURNAL_PAGE_ROUTE,
+    Component: Journal,
   },
   {
     path: CATEGORIES_PAGE_ROUTE,

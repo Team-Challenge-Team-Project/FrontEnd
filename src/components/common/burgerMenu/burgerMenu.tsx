@@ -31,9 +31,14 @@ export const BurgerMenu: React.FC = () => {
         className={clsx('burger-menu__content', { open: isOpen })}
         closeIcon={false}
       >
-        <HeaderLinks className="burger-menu__header-links" />
+        <HeaderLinks
+          onClick={toggleMenu}
+          className="burger-menu__header-links"
+        />
         <div className="burger-menu__header-journal">
-          <Link to="/journal">The Journal</Link>
+          <Link to="/journal" onClick={toggleMenu}>
+            The Journal
+          </Link>
         </div>
         <Tabs>
           {menuItems.map((menu) => (

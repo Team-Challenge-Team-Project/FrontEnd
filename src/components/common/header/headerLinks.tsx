@@ -6,14 +6,17 @@ import { toggleCart } from 'src/store/features/cartSlice';
 
 type THeaderLinksProps = {
   className?: string;
+  onClick?: () => void;
 };
 export const HeaderLinks = ({
   className = 'links__count',
+  onClick,
 }: THeaderLinksProps) => {
   const dispatch = useDispatch();
 
   const handleCartClick = () => {
     dispatch(toggleCart());
+    if (onClick) onClick();
   };
 
   return (
@@ -25,7 +28,12 @@ export const HeaderLinks = ({
           alt="search"
         />
       </div>
-      <Button.Link to="/favorites" icon="Heart" className="links__button" />
+      <Button.Link
+        to="/favorites"
+        icon="Heart"
+        onClick={onClick}
+        className="links__button"
+      />
       <div className="links__button">
         <SvgFinder src="earth.svg" className="links__button_img" alt="earth" />
       </div>
