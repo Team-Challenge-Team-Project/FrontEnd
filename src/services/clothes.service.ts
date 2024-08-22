@@ -1,13 +1,26 @@
 import httpService from './http.service';
-import { ApiResponse, ClothesByFilters, ClothingItems } from './types';
+import { ApiResponse, ClothesByFilters, ClothingItem, ClothingItems } from './types'
 
 const clothesEndpoint = '/public/clothes';
+
 
 const clothesService = {
   getAll: async (): Promise<ClothingItems> => {
     try {
       const response = await httpService.get<ApiResponse<ClothingItems>>(
         clothesEndpoint
+      );
+
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching clothes:', error);
+      throw error;
+    }
+  },
+  getById: async (id): Promise<ClothingItem> => {
+    try {
+      const response = await httpService.get<ApiResponse<ClothingItem>>(
+        `/public/cloth/${id}`
       );
 
       return response.data;

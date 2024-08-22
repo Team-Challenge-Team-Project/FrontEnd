@@ -32,6 +32,7 @@ export type ClothingItems = {
   totalPages: number; // Corrected from totalPage to totalPages
 };
 
+
 export type ApiResponse<T> = T & { status: number };
 
 export type ClothesByFilters = {

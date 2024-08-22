@@ -29,6 +29,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
+    '@typescript-eslint/no-var-requires': 'off',
     quotes: ['error', 'single'],
     semi: ['warn', 'always'],
     'max-len': ['error', { code: 120 }],
