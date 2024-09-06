@@ -11,7 +11,6 @@ export const ProductsBox = ({ itemsCount = 8 }: TProductsBoxProps) => {
 
   const dispatch = useAppDispatch ()
   const clothes = useAppSelector ((state) => {
-    console.log (state.clothes.clothesData)
     return state.clothes.clothesData
   })
 

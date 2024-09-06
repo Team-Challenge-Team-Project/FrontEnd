@@ -5,27 +5,11 @@ import { ClothingItem } from 'src/services/types'
 export type TClothesState = {
   clothesData: ClothingItem[];
   categoriesData: ClothingItem[];
-  clothData: ClothingItem
 };
 
 const initialState: TClothesState = {
   clothesData: [],
   categoriesData: [],
-  clothData: {
-    id: '',
-    sex: '',
-    subCategory: '',
-    brand: '',
-    operationBrand: '',
-    description: '',
-    operationDescription: '',
-    price: '',
-    operationPrice: '',
-    size: '',
-    page: '',
-    sort: '',
-    image: ''
-  }
 }
 
 export const clothesSlice = createSlice ({
@@ -58,13 +42,14 @@ export const getClothes = createAsyncThunk (
 )
 
 
-export const getClothById = createAsyncThunk (
-  'clothes/getClothById',
-  async (id, { dispatch }) => {
-    const item = await clothesService.getById (id)
-    dispatch (setClothes (item))
-  }
-)
+// export const getClothById = createAsyncThunk (
+//   'clothes/getClothById',
+//   async (id: string, { dispatch }) => {
+//     const item = await clothesService.getById (id)
+//     console.log (item)
+//     dispatch (setClothById (item))
+//   }
+// )
 
 // export const getClothesByFilter = createAsyncThunk(
 //   'clothes/getClothesByFilter',

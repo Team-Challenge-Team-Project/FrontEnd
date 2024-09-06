@@ -14,7 +14,7 @@ export type ClothingItem = {
   productSize?: {
     letters: string;
   };
-  image: string;
+  image: string[];
 };
 
 export type ClothingItems = {

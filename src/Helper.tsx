@@ -17,7 +17,7 @@ export const ImageFinder = ({ src, className, alt }: ImageProps) => {
 
   //only for development use
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  if (!isDevelopment) {
+  if (isDevelopment) {
     const Icon = require (`./assets/img/${'girl.jpg'}`)
     return <img src={Icon} className={className} alt={alt} />
   } else {
