@@ -1,125 +1,129 @@
 /* custom modal styles */
 .modal-auth {
-  .rc-dialog-body {
-    padding: 0;
-  }
 
-  .rc-dialog-close {
+.rc-dialog-body {
+    padding: 0;
+}
+
+.rc-dialog-close {
     font-size: 28px;
     opacity: 1;
     font-weight: 400;
-  }
-  .rc-dialog-close:hover {
+}
+
+.rc-dialog-close:hover {
     box-shadow: none;
     color: #565656;
-  }
+}
+
 }
 
 .auth {
-  display: flex;
-  flex-direction: row;
-  /* height: 872px; */
+    display: flex;
+    flex-direction: row;
+    /* height: 872px; */
 }
 
 .auth__header {
-  text-transform: uppercase;
-  line-height: 24.61px !important;
+    text-transform: uppercase;
+    line-height: 24.61px !important;
 }
 
 .auth__img {
-  flex: 0 1 50%;
-  background-image: url('../../../assets/img/auth.jpeg');
-  background-size: cover;
+    flex: 0 1 50%;
+    background-image: url('../../../assets/img/auth.jpeg');
+    background-size: cover;
 }
 
 .auth__btn {
-  background-color: var(--button-color-dark);
-  color: #fff;
-  line-height: 40.68px;
-  width: 100%;
+    background-color: var(--button-color-dark);
+    color: #fff;
+    line-height: 40.68px;
+    width: 100%;
 }
 
 .auth__divider {
-  margin: 64px 0 48px;
+    margin: 64px 0 48px;
 }
 
 .auth__forgot {
-  margin: 48px 0 0;
-  text-decoration: underline;
-  cursor: pointer;
+    margin: 48px 0 0;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* form */
 .auth__form {
-  display: flex;
-  flex-direction: column;
-  margin: 80px 0 0;
-  width: 100%;
-  font-size: 18px;
-  letter-spacing: 0.14em;
-  line-height: 21.09px;
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0 0;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 0.14em;
+    line-height: 21.09px;
 }
 
 .auth__form-label {
-  padding: 0 0 8px;
+    padding: 0 0 8px;
 }
 
 .auth__form-field {
-  margin: 0 0 48px;
-  position: relative;
+    margin: 0 0 48px;
+    position: relative;
 }
 
 .auth__form-field-input {
-  height: 53px;
-  padding: 8px 17px;
-  border-radius: 5px;
-  border: 1px solid #565656;
-  width: 100%;
+    height: 53px;
+    padding: 8px 17px;
+    border-radius: 5px;
+    border: 1px solid #565656;
+    width: 100%;
 }
 
 .auth__form-field-icon {
-  position: absolute;
-  right: 0;
-  background: transparent;
-  border: none;
+    position: absolute;
+    right: 0;
+    background: transparent;
+    border: none;
 }
 
 .auth__form-field-icon:hover {
-  box-shadow: none;
-  transform: scale(1.1);
+    box-shadow: none;
+    transform: scale(1.1);
 }
 
 .auth__form-btn__toggle {
-  margin: 48px 0 0;
+    margin: 48px 0 0;
 }
 
 .auth-form__checkbox {
-  margin: 0 0 24px;
-  text-decoration: underline;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+    margin: 0 0 24px;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 
-  input {
+input {
     margin: 0 24px 0 0;
     border: 1px solid #565656;
     width: 16px;
     height: 16px;
     cursor: pointer;
-  }
+}
+
 }
 
 /* login and signup */
 .login,
 .signup {
-  background: #fffcf4;
-  flex: 1 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 54px 56px;
-  justify-content: center;
-  height: 100%;
+    background: #fffcf4;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 54px 56px;
+    justify-content: center;
+    height: 100%;
 }
 
 /* login */
@@ -127,25 +131,33 @@
 }
 
 .login__divider {
-  margin: 48px 0;
+    margin: 48px 0;
 }
 
 .login__checkbox {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /* signup */
 
 @media (max-width: 425px) {
-  .auth__img {
-    display: none;
-  }
-  .login,
-  .signup {
-    padding: 30px 20px;
-  }
+    .auth__img {
+        display: none;
+    }
 
-  .rc-dialog {
-    width: 94% !important;
-  }
+    .login,
+    .signup {
+        padding: 30px 20px;
+    }
+
+    .rc-dialog {
+        width: 94% !important;
+    }
+}
+
+.exit_account__button {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 200;
 }

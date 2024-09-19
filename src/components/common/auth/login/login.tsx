@@ -4,6 +4,8 @@ import { Divider } from 'src/components/ui/divider';
 import Typography, { ETypographyVariant } from 'src/components/ui/typography';
 import { TActiveAuth, TFormValues } from '../types';
 import { EmailInput, FormCheckbox, PasswordInput } from '../components';
+import { signInRequest } from '../../../../store/features/authSlice'
+import { useAppDispatch } from '../../../../store/hooks'
 
 type TLoginProps = {
   onSubmit: (values: TFormValues) => void;
@@ -11,9 +13,11 @@ type TLoginProps = {
 };
 
 export const Login = ({ onSubmit, onChangeAuth }: TLoginProps) => {
+  const dispatch = useAppDispatch ()
   const initialValues: TFormValues = { email: '', password: '', toggle: false };
+
   const handleSubmit = (values: TFormValues) => {
-    console.log('submit', values);
+    dispatch (signInRequest (values))
     onSubmit(values);
   };
 
