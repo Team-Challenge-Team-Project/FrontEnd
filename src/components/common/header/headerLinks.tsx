@@ -1,7 +1,7 @@
 import { SvgFinder } from 'src/Helper';
 import Auth from '../auth/auth';
 import Button from 'src/components/ui/button';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../../store/hooks'
 import { toggleCart } from 'src/store/features/cartSlice';
 
 type THeaderLinksProps = {
@@ -12,7 +12,7 @@ export const HeaderLinks = ({
   className = 'links__count',
   onClick,
 }: THeaderLinksProps) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleCartClick = () => {
     dispatch(toggleCart());

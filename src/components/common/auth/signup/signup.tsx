@@ -1,9 +1,11 @@
-import { Form, Formik } from 'formik';
-import Button from 'src/components/ui/button';
-import { Divider } from 'src/components/ui/divider';
-import Typography, { ETypographyVariant } from 'src/components/ui/typography';
-import { TActiveAuth, TFormValues } from '../types';
-import { EmailInput, FormCheckbox, PasswordInput } from '../components';
+import { Form, Formik } from 'formik'
+import Button from 'src/components/ui/button'
+import { Divider } from 'src/components/ui/divider'
+import Typography, { ETypographyVariant } from 'src/components/ui/typography'
+import { TActiveAuth, TFormValues } from '../types'
+import { EmailInput, FormCheckbox, PasswordInput } from '../components'
+import { signUpRequest } from '../../../../store/features/authSlice'
+import { useAppDispatch } from '../../../../store/hooks'
 
 type TSignupProps = {
   onSubmit: (values: TFormValues) => void;
@@ -11,44 +13,57 @@ type TSignupProps = {
 };
 
 export const Signup = ({ onSubmit, onChangeAuth }: TSignupProps) => {
-  //   TFormValues;
-  const initialValues = {};
+  const dispatch = useAppDispatch ()
+
+  const initialValues = {
+    mail: '',
+    password: ''
+  }
+
   const handleSubmit = (values) => {
-    console.log('submit', values);
-    onSubmit(values);
-  };
+    dispatch (signUpRequest (values))
+
+
+    onSubmit (values)
+    // try {
+    //   const response = await authService.register (values.email, values.password)
+    //   console.log ('Registration successful:', response)
+    // } catch (error) {
+    //   console.error ('Registration error:', error)
+    // }
+  }
 
   return (
-    <section className="signup">
+    <section className='signup'>
       <Typography
-        as="h2"
+        as='h2'
         variant={ETypographyVariant.H2Regular}
-        className="auth__header"
+        className='auth__header'
       >
         CREATE AN ACCOUNT
       </Typography>
 
       <Formik onSubmit={handleSubmit} initialValues={initialValues}>
-        <Form className="auth__form">
+        <Form className='auth__form'>
           <EmailInput />
           <PasswordInput />
-          <FormCheckbox text={<a href="#">Accept Terms and Conditions</a>} />
+          <FormCheckbox text={<a href='#'>Accept Terms and Conditions</a>} />
 
-          <Button type="submit" classes={{ button: 'auth__btn' }}>
+          <Button type='submit' classes={{ button: 'auth__btn' }}>
             Create an Account
           </Button>
         </Form>
       </Formik>
 
-      <Divider className="auth__divider" />
+      <Divider className='auth__divider' />
 
-      <Typography as="span">Already have an account</Typography>
+      <Typography as='span'>Already have an account</Typography>
       <Button
         classes={{ button: 'auth__btn auth__form-btn__toggle ' }}
-        onClick={() => onChangeAuth('login')}
+        onClick={() => onChangeAuth ('login')}
       >
         Sign In
       </Button>
     </section>
-  );
-};
+  )
+}

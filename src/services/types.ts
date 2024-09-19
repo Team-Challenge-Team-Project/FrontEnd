@@ -43,3 +43,10 @@ export type ClothesByFilters = {
   size?: string;
   [key: string]: string | number | boolean | undefined;
 };
+
+export  type UserRegisterResponse = {
+  id: string;
+  name: string;
+  email: string;
+  favorite: string[]
+}
